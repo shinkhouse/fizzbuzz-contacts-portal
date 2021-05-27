@@ -1,0 +1,45 @@
+app-header {
+    width: 100%;
+}
+
+mat-sidenav-container {
+    width: 100%;
+    mat-drawer {
+        border: 0px;
+        width: 300px;
+        // padding-right: 16px;
+    }
+}
+
+main {
+    height: 100%;
+}
+.mat-drawer-side {
+    border: 0px;
+}
+mat-list-item {
+    border-radius: 0px 36px 36px 0px;
+    width: calc(100% - 16px) !important;
+    & mat-icon {
+        width: 18px;
+        height: 18px;
+        font-size: 18px;
+        margin: 0px 20px 0px 12px;
+    }
+
+    & span {
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    &.active {
+        background-color: var(--hover-color-primary);
+        mat-icon, span {
+            color: var(--color-primary);
+        }
+
+        &:hover {
+            background-color: var(--hover-color-primary) !important;
+        }
+    }
+}

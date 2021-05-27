@@ -1,0 +1,45 @@
+.header-spacer {
+    width: 24px;
+}
+mat-toolbar {
+    background: white;
+    // width: 90%;
+    // border-bottom: 1px solid red;
+    .title-section {
+        min-width: 268px;
+        padding-right: 88px;
+        .logo-icon {
+            width: 30px;
+            height: 30px;
+            // line-height: 30px;
+            font-size: 30px;
+            margin-right: 12px;
+            transform: rotate(45deg);
+        }
+        button {
+            margin-right: 16px;
+        }
+    }
+}
+
+.search-field {
+    height: 48px;
+    background: #f1f3f4;
+    border-radius: 8px;
+    max-width: 720px;
+    flex: 1 1 auto;
+
+    button {
+        margin: 0px 4px;
+    }
+
+    input {
+        font-size: 16px;
+        margin: 0px 4px;
+        height: 100%;
+        flex: 1 1 auto;
+        background: transparent;
+        border: 0px;
+        outline: none;
+    }
+}
