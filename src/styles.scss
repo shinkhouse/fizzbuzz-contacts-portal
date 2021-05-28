@@ -42,6 +42,10 @@ $contacts-clone-theme: mat.define-light-theme(
     box-sizing: border-box;
 }
 
+::placeholder {
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
 html, body {
     margin: 0;
     padding: 0;

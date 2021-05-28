@@ -1,0 +1,50 @@
+.contact {
+    padding: 16px 0px;
+
+    > div:first-child {
+        padding-left: 24px;
+    }
+
+    > div:last-child {
+        padding-right: 24px;
+    }
+}
+
+.contact-header {
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    border-bottom:  1px solid rgba(0,0,0,.12);
+    > div {
+        span {
+            font-weight: 500;
+        }
+    }
+}
+
+.contact-row {
+    padding: 16px 0px;
+
+    > div:first-child {
+        padding-left: 24px;
+    }
+
+    > div:last-child {
+        padding-right: 24px;
+    }
+
+    &:hover {
+        background: rgba(0,0,0,.06);
+        cursor: pointer;
+    }
+
+
+
+    .profile-icon {
+        width: 36px;
+        height: 36px;
+        background: var(--color-primary);
+        border-radius: 36px;
+    }
+}

@@ -1,1 +1,37 @@
-<p>contacts works!</p>
+<div class="contact contact-header" fxLayout="row" fxLayoutAlign="start center">
+    <div class="full-name" fxFlex="20">
+        <span>Full Name</span>
+    </div>
+    <div class="job-title" fxFlex="20">
+        <span>Job Title</span>
+    </div>
+    <div class="email" fxFlex="20">
+        <span>Email</span>
+    </div>
+    <div class="phone" fxFlex="20">
+        <span>Phone</span>
+    </div>
+    <div class="actions" fxFlex="20">
+        <span>Actions</span>
+    </div>
+</div>
+<div class="contacts-container" fxLayout="column">
+    <div class="contact contact-row" fxLayout="row" fxLayoutAlign="start center" *ngFor="let contact of contactList; let index = index" (click)="openContactDetails(contact)">
+        <div class="full-name" fxFlex="20" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="16px">
+            <div class="profile-icon"></div>
+            <span>{{contact.firstName}} {{contact.lastName}}</span>
+        </div>
+        <div class="job-title" fxFlex="20">
+            <span>{{contact.jobTitle}}</span>
+        </div>
+        <div class="email" fxFlex="20">
+            <span>{{contact.email}}</span>
+        </div>
+        <div class="phone" fxFlex="20">
+            <span>{{contact.phone}}</span>
+        </div>
+        <div class="actions" fxFlex="20">
+            <span>Actions</span>
+        </div>
+    </div>
+</div>
