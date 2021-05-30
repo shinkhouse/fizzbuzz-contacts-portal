@@ -17,7 +17,13 @@ main {
 .mat-drawer-side {
     border: 0px;
 }
+
+hr {
+    border-width: 1px 0px 0px 0px;
+    border-color: rgba(0, 0, 0, 0.12);
+}
 mat-list-item {
+    height: 40px !important;
     border-radius: 0px 36px 36px 0px;
     width: calc(100% - 16px) !important;
     & mat-icon {
@@ -34,7 +40,8 @@ mat-list-item {
 
     &.active {
         background-color: var(--hover-color-primary);
-        mat-icon, span {
+        mat-icon,
+        span {
             color: var(--color-primary);
         }
 

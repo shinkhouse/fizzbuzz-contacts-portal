@@ -25,10 +25,9 @@ export class ContactsComponent implements OnInit {
 
     openContactDetails(contactDetails: Contact) {
         this.dialog.open(ContactDetailsComponent, {
-            minWidth: '400px',
-            data: {
-                contactDetails
-            }
+            minWidth: '700px',
+            panelClass: 'contact-modal',
+            data: contactDetails
         })
     }
 

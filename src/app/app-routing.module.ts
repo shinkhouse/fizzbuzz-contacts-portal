@@ -1,7 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ContactDetailsComponent } from './core/components/contact-details/contact-details.component';
 
 const routes: Routes = [
+    {
+        path: 'contact-deets',
+        component: ContactDetailsComponent
+    },
     {
         path: 'contacts',
         loadChildren: () => import('./pages/contacts/contacts.module').then((m) => m.ContactsModule)

@@ -1,1 +1,142 @@
-<p>contact-details works!</p>
+<div class="contact-details" *ngIf="contact && !editMode">
+    <mat-toolbar fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="16px">
+        <span>{{contact?.firstName}} {{contact?.lastName}}</span>
+        <mat-chip-list *ngIf="false">
+            <mat-chip>
+                <mat-icon class="material-icons-outlined">label</mat-icon>
+                No Label
+            </mat-chip>
+        </mat-chip-list>
+        <div fxFlex></div>
+        <div class="action-buttons">
+            <button mat-icon-button>
+                <mat-icon [color]="contact.favorite ? 'primary' : ''">{{
+                    contact.favorite ? "star" : "star_outline"
+                }}</mat-icon>
+            </button>
+            <button mat-icon-button>
+                <mat-icon>edit</mat-icon>
+            </button>
+            <button mat-icon-button (click)="$event.stopPropagation()">
+                <mat-icon>more_vert</mat-icon>
+            </button>
+            <button mat-icon-button>
+                <mat-icon>close</mat-icon>
+            </button>
+        </div>
+    </mat-toolbar>
+    <div class="detail-section">
+        <h2>Contact Details</h2>
+    </div>
+</div>
+<div class="edit-contact-details" *ngIf="editMode">
+    <mat-toolbar fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="16px">
+        <span>Edit Contact</span>
+        <mat-chip-list>
+            <mat-chip>
+                <mat-icon class="material-icons-outlined">label</mat-icon>
+                No Label
+            </mat-chip>
+        </mat-chip-list>
+    </mat-toolbar>
+    <form [formGroup]="contactForm">
+        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="16px">
+            <mat-icon>person</mat-icon>
+            <mat-form-field fxFlex>
+                <mat-label>First Name</mat-label>
+                <input matInput type="text" formControlName="firstName" />
+            </mat-form-field>
+            <mat-form-field fxFlex>
+                <mat-label>Last Name</mat-label>
+                <input matInput type="text" formControlName="lastName" />
+            </mat-form-field>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="16px">
+            <mat-icon>work</mat-icon>
+            <mat-form-field fxFlex>
+                <mat-label>Company</mat-label>
+                <input matInput type="text" formControlName="companyName" />
+            </mat-form-field>
+            <mat-form-field fxFlex>
+                <mat-label>Job Title</mat-label>
+                <input matInput type="text" formControlName="jobTitle" />
+            </mat-form-field>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="16px">
+            <mat-icon>email</mat-icon>
+            <mat-form-field fxFlex>
+                <mat-label>Email</mat-label>
+                <input matInput type="text" formControlName="email" />
+            </mat-form-field>
+            <mat-form-field fxFlex>
+                <mat-label>Type</mat-label>
+                <input matInput type="text" formControlName="emailType" />
+            </mat-form-field>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="16px">
+            <mat-icon>phone</mat-icon>
+            <mat-form-field fxFlex>
+                <mat-label>Phone</mat-label>
+                <input matInput type="text" formControlName="phone" />
+            </mat-form-field>
+            <mat-form-field fxFlex>
+                <mat-label>Type</mat-label>
+                <input matInput type="text" formControlName="phoneType" />
+            </mat-form-field>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="16px">
+            <mat-icon>note</mat-icon>
+            <mat-form-field fxFlex>
+                <mat-label>Notes</mat-label>
+                <input matInput type="text" formControlName="notes" />
+            </mat-form-field>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="16px">
+            <mat-icon>chicken</mat-icon>
+            <mat-form-field fxFlex>
+                <mat-label>Birthday</mat-label>
+                <input matInput type="text" formControlName="birthday" />
+            </mat-form-field>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="16px">
+            <mat-icon>link</mat-icon>
+            <mat-form-field fxFlex>
+                <mat-label>Website</mat-label>
+                <input matInput type="text" formControlName="website" />
+            </mat-form-field>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="16px">
+            <mat-icon>group_work</mat-icon>
+            <mat-form-field fxFlex>
+                <mat-label>Relationship</mat-label>
+                <input matInput type="text" formControlName="relationship" />
+            </mat-form-field>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="16px">
+            <mat-icon>chat</mat-icon>
+            <mat-form-field fxFlex>
+                <mat-label>Chat</mat-label>
+                <input matInput type="text" formControlName="chat" />
+            </mat-form-field>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="16px">
+            <mat-icon>phone</mat-icon>
+            <mat-form-field fxFlex>
+                <mat-label>Chat</mat-label>
+                <input matInput type="text" formControlName="internetCall" />
+            </mat-form-field>
+        </div>
+    </form>
+    <mat-toolbar class="footer" fxLayoutGap="16px">
+        <button mat-button color="primary">
+            <span>Show more</span>
+        </button>
+        <div fxFlex></div>
+        <button mat-button color="primary">
+            <span>Cancel</span>
+        </button>
+        <button mat-flat-button color="primary">
+            <span>Save</span>
+        </button>
+    </mat-toolbar>
+</div>
