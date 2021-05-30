@@ -1,5 +1,6 @@
 .contact {
     padding: 16px 0px;
+    height: 64px;
 
     > div:first-child {
         padding-left: 24px;
@@ -11,6 +12,7 @@
 }
 
 .contact-header {
+    color: #5f6368;
     background: white;
     position: sticky;
     top: 0;
@@ -37,6 +39,14 @@
     &:hover {
         background: rgba(0,0,0,.06);
         cursor: pointer;
+
+        .action-buttons {
+            display: block;
+        }
+    }
+
+    .action-buttons {
+        display: none;
     }
 
 
@@ -46,5 +56,46 @@
         height: 36px;
         background: var(--color-primary);
         border-radius: 36px;
+        text-align: center;
+
+        & span {
+            // margin: 12px;
+            color: white;
+            font-size: 16px;
+            line-height: 38px;
+            text-align: center;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+    .phone {
+        display: none;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 700px) {
+    .phone {
+        display: none;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 1100px) {
+    .email {
+        display: none;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (max-width: 1280px) {
+    .job-title {
+        display: none;
     }
 }

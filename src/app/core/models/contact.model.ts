@@ -17,7 +17,7 @@ export interface Contact {
     chat?: string;
     internetCall?: string;
     nickname?: string;
-    favorite?: boolean;
+    favorite: boolean;
     lastContacted?: Date;
     inTrash?: boolean;
     label?: string;

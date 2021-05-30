@@ -6,6 +6,9 @@ import { ContactsComponent } from './contacts.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ContactDetailsModule } from 'src/app/core/components/contact-details/contact-details.module';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSnackBarModule} from '@angular/material/snack-bar';
 
 @NgModule({
     declarations: [ContactsComponent],
@@ -14,7 +17,10 @@ import { ContactDetailsModule } from 'src/app/core/components/contact-details/co
         ContactsRoutingModule,
         FlexLayoutModule,
         MatDialogModule,
-        ContactDetailsModule
+        ContactDetailsModule,
+        MatIconModule,
+        MatButtonModule,
+        MatSnackBarModule
     ],
     exports: [ContactsComponent],
 })

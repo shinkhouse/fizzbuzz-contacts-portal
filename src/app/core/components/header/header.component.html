@@ -1,34 +1,63 @@
 <mat-toolbar fxLayout="row" fxLayoutAlign="start center">
-        <div class="title-section" fxLayout="row" fxLayoutAlign="start center">
-            <button mat-icon-button>
-                <mat-icon>menu</mat-icon>
+    <div class="title-section" fxLayout="row" fxLayoutAlign="start center">
+        <button mat-icon-button>
+            <mat-icon>menu</mat-icon>
+        </button>
+        <mat-icon
+            class="logo-icon"
+            svgIcon="fizz_buzz"
+            color="primary"
+        ></mat-icon>
+        <span>FizzBuzz</span>
+    </div>
+    <div class="search-field" fxLayout="row" fxLayoutAlign="start center">
+        <button mat-icon-button>
+            <mat-icon>search</mat-icon>
+        </button>
+        <input
+            type="text"
+            [(ngModel)]="searchTextInput"
+            placeholder="Search"
+            fxFlex
+        />
+        <button
+            mat-icon-button
+            (click)="clearSearchField()"
+            *ngIf="searchTextInput"
+        >
+            <mat-icon>close</mat-icon>
+        </button>
+    </div>
+    <div fxFlex></div>
+    <div fxLayout="row" class="header-actions">
+        <button mat-icon-button [matMenuTriggerFor]="helpMenu">
+            <mat-icon>help_outline</mat-icon>
+        </button>
+        <mat-menu #helpMenu="matMenu">
+            <button mat-menu-item>
+                <span>Send feedback</span>
             </button>
-            <mat-icon class="logo-icon" svgIcon="fizz_buzz" color="primary"></mat-icon>
-            <span>FizzBuzz</span>
-        </div>
-        <div class="search-field" fxLayout="row" fxLayoutAlign="start center">
-            <button mat-icon-button>
-                <mat-icon>search</mat-icon>
+            <button mat-menu-item>
+                <span>Help</span>
             </button>
-            <input type="text" placeholder="Search" fxFlex>
-            <button mat-icon-button *ngIf="true">
-                <mat-icon>close</mat-icon>
+        </mat-menu>
+        <button mat-icon-button [matMenuTriggerFor]="settingsMenu">
+            <mat-icon class="material-icons-outlined">settings</mat-icon>
+        </button>
+        <mat-menu #settingsMenu="matMenu">
+            <button mat-menu-item>
+                <span>Undo changes</span>
             </button>
-        </div>
-        <div fxFlex></div>
-        <div fxLayout="row">
-            <button mat-icon-button>
-                <mat-icon>help_outline</mat-icon>
+            <button mat-menu-item>
+                <span>More settings</span>
             </button>
-            <button mat-icon-button>
-                <mat-icon class="material-icons-outlined">settings</mat-icon>
-            </button>
-            <div class="header-spacer"></div>
-            <button mat-icon-button>
-                <mat-icon>apps</mat-icon>
-            </button>
-            <button mat-icon-button>
-                <mat-icon>account_circle</mat-icon>
-            </button>
-        </div>
+        </mat-menu>
+        <div class="header-spacer"></div>
+        <button mat-icon-button>
+            <mat-icon>apps</mat-icon>
+        </button>
+        <button mat-icon-button>
+            <mat-icon>account_circle</mat-icon>
+        </button>
+    </div>
 </mat-toolbar>

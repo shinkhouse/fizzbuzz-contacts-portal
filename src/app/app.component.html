@@ -1,13 +1,15 @@
 <main>
     <app-header></app-header>
     <mat-drawer-container>
-        <mat-drawer #drawer class="example-sidenav" mode="side" opened>
+        <mat-drawer #drawer class="example-sidenav" [mode]="drawerMode" [opened]="isDrawerOpen">
             <mat-nav-list>
                 <mat-list-item routerLink="/contacts" routerLinkActive="active">
                     <mat-icon>
                         person
                     </mat-icon>
                     <span>Contacts</span>
+                    <div fxFlex></div>
+                    <span>{{contacts.getContacts().length}}</span>
                 </mat-list-item>
                 <mat-list-item routerLink="/frequent" routerLinkActive="active">
                     <mat-icon>

@@ -9,7 +9,13 @@ export class ContactsService {
     constructor() {}
 
     getContacts(): Contact[] {
-        return Contacts;
+        return Contacts.sort((a, b) => {
+            if (a.firstName > b.firstName) {
+                return 1;
+            } else {
+                return -1;
+            }
+        })
     }
 
     getFavoriteContacts(): Contact[] {

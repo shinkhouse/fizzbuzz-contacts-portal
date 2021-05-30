@@ -51,6 +51,7 @@ html, body {
     padding: 0;
     height: 100%;
     font-family: Roboto, "Helvetica Neue", sans-serif;
+    background: white;
 
     --color-primary: #{mat.get-color-from-palette(map-get($contacts-clone-theme, primary))};
     --color-accent: #{mat.get-color-from-palette(map-get($contacts-clone-theme, accent))};
@@ -59,8 +60,14 @@ html, body {
 }
 
 .mat-drawer-container {
+    background: white;
     height: calc(100% - 64px);
     mat-drawer {
         width: 285px;
     }
+}
+
+button.mat-menu-item {
+    height: 36px;
+    line-height: 36px;
 }
