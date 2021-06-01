@@ -6,10 +6,11 @@ import { Contact } from '../models/contact.model';
     providedIn: 'root',
 })
 export class ContactsService {
+    private contacts = Contacts;
     constructor() {}
 
     getContacts(): Contact[] {
-        return Contacts.sort((a, b) => {
+        return this.contacts.sort((a, b) => {
             if (a.firstName > b.firstName) {
                 return 1;
             } else {
@@ -19,25 +20,35 @@ export class ContactsService {
     }
 
     getFavoriteContacts(): Contact[] {
-        return this.getContacts().filter((contact: Contact, index: number) => {
+        return this.contacts.filter((contact: Contact, index: number) => {
             return contact.favorite === true;
         })
     }
 
+    getFrequentContacts(): Contact[] {
+        return this.contacts.sort((a, b) => {
+            if (a.lastContacted > b.lastContacted) {
+                return 1;
+            } else {
+                return -1;
+            }
+        });
+    }
+
     getContactsInTrash(): Contact[] {
-        return this.getContacts().filter((contact: Contact, index: number) => {
+        return this.contacts.filter((contact: Contact, index: number) => {
             return contact.inTrash === true;
         })
     }
 
     getContactById(contactId: number): Contact | undefined {
-        return this.getContacts().find((contact: Contact, index: number) => {
+        return this.contacts.find((contact: Contact, index: number) => {
             return contact.id === contactId;
         });
     }
 
     findContactByFullName(fullName: string): Contact[] {
-        return this.getContacts();
+        return this.contacts;
     }
 
 }

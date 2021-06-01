@@ -18,7 +18,7 @@ export interface Contact {
     internetCall?: string;
     nickname?: string;
     favorite: boolean;
-    lastContacted?: Date;
+    lastContacted: Date;
     inTrash?: boolean;
     label?: string;
     labelId?: string;
