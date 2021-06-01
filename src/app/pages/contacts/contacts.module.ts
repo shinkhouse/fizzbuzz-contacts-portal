@@ -9,18 +9,20 @@ import { ContactDetailsModule } from 'src/app/core/components/contact-details/co
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSnackBarModule} from '@angular/material/snack-bar';
+import { ListingModule } from 'src/app/core/components/listing/listing.module';
 
 @NgModule({
     declarations: [ContactsComponent],
     imports: [
         CommonModule,
+        ContactDetailsModule,
         ContactsRoutingModule,
         FlexLayoutModule,
         MatDialogModule,
-        ContactDetailsModule,
         MatIconModule,
         MatButtonModule,
-        MatSnackBarModule
+        MatSnackBarModule,
+        ListingModule
     ],
     exports: [ContactsComponent],
 })
