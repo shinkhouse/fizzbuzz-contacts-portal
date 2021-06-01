@@ -1,46 +1,59 @@
 <main>
     <app-header></app-header>
     <mat-drawer-container>
-        <mat-drawer #drawer class="example-sidenav" [mode]="drawerMode" [opened]="isDrawerOpen">
+        <mat-drawer
+            #drawer
+            class="example-sidenav"
+            [mode]="drawerMode"
+            [opened]="isDrawerOpen"
+        >
             <mat-nav-list>
                 <mat-list-item routerLink="/contacts" routerLinkActive="active">
-                    <mat-icon>
-                        person
-                    </mat-icon>
+                    <mat-icon> person </mat-icon>
                     <span>Contacts</span>
                     <div fxFlex></div>
-                    <span>{{contacts.getContacts().length}}</span>
+                    <span>{{ contactsLength }}</span>
                 </mat-list-item>
                 <mat-list-item routerLink="/frequent" routerLinkActive="active">
-                    <mat-icon>
-                        history
-                    </mat-icon>
+                    <mat-icon> history </mat-icon>
                     <span>Frequently Contacted</span>
                 </mat-list-item>
-                <mat-list-item routerLink="/suggestions" routerLinkActive="active">
-                    <mat-icon>
-                        merge_type
-                    </mat-icon>
+                <mat-list-item
+                    routerLink="/suggestions"
+                    routerLinkActive="active"
+                >
+                    <mat-icon> merge_type </mat-icon>
                     <span>Merge & Fix</span>
                 </mat-list-item>
-                <hr>
-                <mat-list-item routerLink="/tag/1" routerLinkActive="active">
+                <hr />
+                  <mat-accordion>
+                        <mat-expansion-panel hideToggle expanded>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                <mat-icon>label</mat-icon>
+                                <span>Labels</span>
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <mat-list-item routerLinkActive="active">
+                            <mat-icon> add </mat-icon>
+                            <span>Add Label</span>
+                        </mat-list-item>
+                    </mat-expansion-panel>
+                    </mat-accordion>
+                <!-- <mat-list-item routerLink="/tag/1" routerLinkActive="active">
                     <mat-icon>
                         label
                     </mat-icon>
                     <span>Labels</span>
-                </mat-list-item>
-                <hr>
+                </mat-list-item> -->
+
+                <hr />
                 <mat-list-item routerLink="/other" routerLinkActive="active">
-                    <mat-icon>
-                        cake
-                    </mat-icon>
+                    <mat-icon> cake </mat-icon>
                     <span>Other Contacts</span>
                 </mat-list-item>
                 <mat-list-item routerLink="/trash" routerLinkActive="active">
-                    <mat-icon>
-                        delete
-                    </mat-icon>
+                    <mat-icon> delete </mat-icon>
                     <span>Trash</span>
                 </mat-list-item>
             </mat-nav-list>

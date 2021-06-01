@@ -19,6 +19,7 @@ import { ContactsService } from './core/services/contacts.service';
     styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
+    public contactsLength = this.contacts.getContacts().length;
     public drawerMode: MatDrawerMode;
     public isDrawerOpen: boolean;
     @ViewChild('drawer') drawer: MatSidenav;

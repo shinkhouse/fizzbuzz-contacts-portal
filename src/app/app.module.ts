@@ -12,6 +12,7 @@ import {MatListModule} from '@angular/material/list';
 import {MatButtonModule} from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { ContactDetailsModule } from './core/components/contact-details/contact-details.module';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ContactDetailsModule } from './core/components/contact-details/contact-
     MatListModule,
     MatButtonModule,
     MatIconModule,
-    ContactDetailsModule
+    ContactDetailsModule,
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -45,7 +45,7 @@ mat-list-item {
             color: var(--color-primary);
         }
 
-        &:hover {
+        &:hover, &:focus {
             background-color: var(--hover-color-primary) !important;
         }
     }
