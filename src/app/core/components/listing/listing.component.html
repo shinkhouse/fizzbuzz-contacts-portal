@@ -1,0 +1,74 @@
+<div class="contact contact-header" fxLayout="row" fxLayoutAlign="start center">
+    <div class="full-name" fxFlex>
+        <span>Full Name</span>
+    </div>
+    <div class="job-title" fxFlex>
+        <span>Job Title</span>
+    </div>
+    <div class="email" fxFlex>
+        <span>Email</span>
+    </div>
+    <div class="phone" fxFlex>
+        <span>Phone</span>
+    </div>
+    <div class="actions">
+        <span>Actions</span>
+    </div>
+</div>
+<div class="contacts-container" fxLayout="column">
+    <div
+        class="contact contact-row"
+        fxLayout="row"
+        fxLayoutAlign="start center"
+        *ngFor="let contact of contactList; let index = index"
+        (click)="openContactDetails(contact)"
+    >
+        <div
+            class="full-name"
+            fxFlex
+            fxLayout="row"
+            fxLayoutAlign="start center"
+            fxLayoutGap="16px"
+        >
+            <div class="profile-icon">
+                <span> {{ contact.firstName.substr(0, 1) }}</span>
+            </div>
+            <span>{{ contact.firstName }} {{ contact.lastName }}</span>
+        </div>
+        <div class="email" fxFlex>
+            <span>{{ contact.email }}</span>
+        </div>
+        <div class="phone" fxFlex>
+            <span>{{ contact.phone }}</span>
+        </div>
+        <div class="job-title" fxFlex>
+            <span>{{ contact.jobTitle }}</span>
+        </div>
+        <div class="actions">
+            <div class="action-buttons">
+                <button
+                    mat-icon-button
+                    (click)="
+                        favoriteContact(contact.favorite, index);
+                        $event.stopPropagation()
+                    "
+                >
+                    <mat-icon [color]="contact.favorite ? 'primary' : ''">{{
+                        contact.favorite ? "star" : "star_outline"
+                    }}</mat-icon>
+                </button>
+                <button
+                    mat-icon-button
+                    (click)="
+                        openContactDetails(contact); $event.stopPropagation()
+                    "
+                >
+                    <mat-icon>edit</mat-icon>
+                </button>
+                <button mat-icon-button (click)="$event.stopPropagation()">
+                    <mat-icon>more_vert</mat-icon>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
