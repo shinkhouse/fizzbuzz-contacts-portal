@@ -46,7 +46,7 @@ export const Contacts: Contact[] = [
         favorite: true,
         lastContacted: new Date('2/17/2017'),
         inTrash: false,
-        label: 'Mazda',
+        label: 'Friends',
     },
     {
         id: 3,
@@ -84,7 +84,7 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('10/22/2017'),
         inTrash: true,
-        label: 'Mercedes-Benz',
+        label: 'Work',
     },
     {
         id: 4,
@@ -160,7 +160,7 @@ export const Contacts: Contact[] = [
         favorite: true,
         lastContacted: new Date('3/9/2021'),
         inTrash: true,
-        label: 'Mercedes-Benz',
+        label: 'Work',
     },
     {
         id: 6,
@@ -222,7 +222,7 @@ export const Contacts: Contact[] = [
         favorite: true,
         lastContacted: new Date('4/9/2019'),
         inTrash: true,
-        label: 'Mazda',
+        label: 'Friends',
     },
     {
         id: 8,
@@ -267,7 +267,7 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('2/25/2017'),
         inTrash: false,
-        label: 'Volkswagen',
+        label: 'Family',
     },
     {
         id: 9,
@@ -330,7 +330,7 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('9/4/2016'),
         inTrash: true,
-        label: 'Mazda',
+        label: 'Family',
     },
     {
         id: 12,
@@ -375,7 +375,7 @@ export const Contacts: Contact[] = [
         favorite: true,
         lastContacted: new Date('11/11/2014'),
         inTrash: false,
-        label: 'Mazda',
+        label: 'Family',
     },
     {
         id: 13,
@@ -451,7 +451,7 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('10/24/2015'),
         inTrash: true,
-        label: 'Mazda',
+        label: 'Family',
     },
     {
         id: 15,
@@ -527,7 +527,7 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('1/23/2017'),
         inTrash: true,
-        label: 'Mazda',
+        label: 'Family',
     },
     {
         id: 17,
@@ -565,7 +565,7 @@ export const Contacts: Contact[] = [
         favorite: true,
         lastContacted: new Date('4/16/2016'),
         inTrash: false,
-        label: 'Mercedes-Benz',
+        label: 'Work',
     },
     {
         id: 18,
@@ -755,7 +755,7 @@ export const Contacts: Contact[] = [
         favorite: true,
         lastContacted: new Date('2/23/2020'),
         inTrash: false,
-        label: 'Mazda',
+        label: 'Friends',
     },
     {
         id: 23,
@@ -800,7 +800,7 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('2/12/2020'),
         inTrash: false,
-        label: 'Mazda',
+        label: 'Friends',
     },
     {
         id: 24,
@@ -824,7 +824,7 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('4/18/2018'),
         inTrash: true,
-        label: 'Mercedes-Benz',
+        label: 'Work',
     },
     {
         id: 25,
@@ -876,7 +876,7 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('3/4/2017'),
         inTrash: true,
-        label: 'Mazda',
+        label: 'Friends',
     },
     {
         id: 26,
@@ -940,7 +940,7 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('8/22/2015'),
         inTrash: false,
-        label: 'Mazda',
+        label: 'Friends',
     },
     {
         id: 29,
@@ -1030,7 +1030,7 @@ export const Contacts: Contact[] = [
         favorite: true,
         lastContacted: new Date('2/15/2018'),
         inTrash: true,
-        label: 'Mercedes-Benz',
+        label: 'Work',
     },
     {
         id: 31,
@@ -1075,7 +1075,7 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('5/13/2019'),
         inTrash: false,
-        label: 'Mercedes-Benz',
+        label: 'Work',
     },
     {
         id: 32,
@@ -1136,7 +1136,7 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('5/3/2021'),
         inTrash: true,
-        label: 'Mazda',
+        label: 'Friends',
     },
     {
         id: 34,
@@ -1188,7 +1188,7 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('5/8/2021'),
         inTrash: true,
-        label: 'Mercedes-Benz',
+        label: 'Work',
     },
     {
         id: 35,
@@ -1219,7 +1219,7 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('3/1/2016'),
         inTrash: false,
-        label: 'Mercedes-Benz',
+        label: 'Work',
     },
     {
         id: 36,
@@ -1243,7 +1243,7 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('10/10/2015'),
         inTrash: false,
-        label: 'Mazda',
+        label: 'Friends',
     },
     {
         id: 37,
@@ -1281,7 +1281,7 @@ export const Contacts: Contact[] = [
         favorite: true,
         lastContacted: new Date('4/2/2020'),
         inTrash: false,
-        label: 'Mazda',
+        label: 'Friends',
     },
     {
         id: 38,
@@ -1312,7 +1312,7 @@ export const Contacts: Contact[] = [
         favorite: true,
         lastContacted: new Date('10/13/2015'),
         inTrash: true,
-        label: 'Mercedes-Benz',
+        label: 'Work',
     },
     {
         id: 39,
@@ -1343,7 +1343,7 @@ export const Contacts: Contact[] = [
         favorite: true,
         lastContacted: new Date('4/16/2016'),
         inTrash: false,
-        label: 'Mazda',
+        label: 'Friends',
     },
     {
         id: 40,
@@ -1397,7 +1397,7 @@ export const Contacts: Contact[] = [
         favorite: true,
         lastContacted: new Date('11/10/2017'),
         inTrash: true,
-        label: 'Mazda',
+        label: 'Friends',
     },
     {
         id: 42,
@@ -1413,7 +1413,7 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('7/22/2019'),
         inTrash: false,
-        label: 'Mazda',
+        label: 'Friends',
     },
     {
         id: 43,
@@ -1429,7 +1429,7 @@ export const Contacts: Contact[] = [
         favorite: true,
         lastContacted: new Date('4/10/2018'),
         inTrash: true,
-        label: 'Mazda',
+        label: 'Friends',
     },
     {
         id: 44,
@@ -1491,7 +1491,7 @@ export const Contacts: Contact[] = [
         favorite: true,
         lastContacted: new Date('1/20/2019'),
         inTrash: true,
-        label: 'Mazda',
+        label: 'Friends',
     },
     {
         id: 46,
@@ -1543,7 +1543,7 @@ export const Contacts: Contact[] = [
         favorite: true,
         lastContacted: new Date('5/3/2016'),
         inTrash: true,
-        label: 'Mazda',
+        label: 'Friends',
     },
     {
         id: 47,
@@ -1574,7 +1574,7 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('2/16/2015'),
         inTrash: false,
-        label: 'Mazda',
+        label: 'Friends',
     },
     {
         id: 48,
@@ -1590,7 +1590,7 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('2/27/2015'),
         inTrash: false,
-        label: 'Mazda',
+        label: 'Friends',
     },
     {
         id: 49,
@@ -1711,7 +1711,7 @@ export const Contacts: Contact[] = [
         favorite: true,
         lastContacted: new Date('3/30/2017'),
         inTrash: true,
-        label: 'Mazda',
+        label: 'Friends',
     },
     {
         id: 52,
@@ -1749,7 +1749,7 @@ export const Contacts: Contact[] = [
         favorite: true,
         lastContacted: new Date('9/13/2015'),
         inTrash: false,
-        label: 'Mazda',
+        label: 'Friends',
     },
     {
         id: 53,
@@ -1780,7 +1780,7 @@ export const Contacts: Contact[] = [
         favorite: true,
         lastContacted: new Date('9/27/2015'),
         inTrash: false,
-        label: 'Mazda',
+        label: 'Friends',
     },
     {
         id: 54,
@@ -1849,7 +1849,7 @@ export const Contacts: Contact[] = [
         favorite: true,
         lastContacted: new Date('3/30/2017'),
         inTrash: false,
-        label: 'Mazda',
+        label: 'Friends',
     },
     {
         id: 56,
@@ -1901,7 +1901,7 @@ export const Contacts: Contact[] = [
         favorite: true,
         lastContacted: new Date('6/16/2014'),
         inTrash: true,
-        label: 'Mercedes-Benz',
+        label: 'Work',
     },
     {
         id: 57,
@@ -1925,7 +1925,7 @@ export const Contacts: Contact[] = [
         favorite: true,
         lastContacted: new Date('10/30/2014'),
         inTrash: false,
-        label: 'Mercedes-Benz',
+        label: 'Work',
     },
     {
         id: 58,
@@ -1987,7 +1987,7 @@ export const Contacts: Contact[] = [
         favorite: true,
         lastContacted: new Date('4/2/2017'),
         inTrash: true,
-        label: 'Mercedes-Benz',
+        label: 'Work',
     },
     {
         id: 60,
@@ -2042,7 +2042,7 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('5/24/2015'),
         inTrash: false,
-        label: 'Mazda',
+        label: 'Friends',
     },
     {
         id: 62,
@@ -2094,7 +2094,7 @@ export const Contacts: Contact[] = [
         favorite: true,
         lastContacted: new Date('8/9/2014'),
         inTrash: true,
-        label: 'Mazda',
+        label: 'Friends',
     },
     {
         id: 63,
@@ -2132,7 +2132,7 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('2/26/2019'),
         inTrash: true,
-        label: 'Mercedes-Benz',
+        label: 'Work',
     },
     {
         id: 64,
@@ -2163,7 +2163,7 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('3/26/2019'),
         inTrash: true,
-        label: 'Mazda',
+        label: 'Friends',
     },
     {
         id: 65,
@@ -2201,7 +2201,7 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('11/3/2019'),
         inTrash: false,
-        label: 'Mazda',
+        label: 'Friends',
     },
     {
         id: 66,
@@ -2253,7 +2253,7 @@ export const Contacts: Contact[] = [
         favorite: true,
         lastContacted: new Date('10/14/2014'),
         inTrash: false,
-        label: 'Mercedes-Benz',
+        label: 'Work',
     },
     {
         id: 67,
@@ -2269,7 +2269,7 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('10/26/2020'),
         inTrash: false,
-        label: 'Mercedes-Benz',
+        label: 'Work',
     },
     {
         id: 68,
@@ -2321,7 +2321,7 @@ export const Contacts: Contact[] = [
         favorite: true,
         lastContacted: new Date('12/2/2015'),
         inTrash: false,
-        label: 'Mercedes-Benz',
+        label: 'Work',
     },
     {
         id: 69,
@@ -2376,7 +2376,7 @@ export const Contacts: Contact[] = [
         favorite: true,
         lastContacted: new Date('2/7/2017'),
         inTrash: false,
-        label: 'Mercedes-Benz',
+        label: 'Work',
     },
     {
         id: 71,
@@ -2423,7 +2423,7 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('7/15/2020'),
         inTrash: true,
-        label: 'Mercedes-Benz',
+        label: 'Work',
     },
     {
         id: 73,
@@ -2461,7 +2461,7 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('12/13/2020'),
         inTrash: true,
-        label: 'Mazda',
+        label: 'Friends',
     },
     {
         id: 74,
@@ -2492,7 +2492,7 @@ export const Contacts: Contact[] = [
         favorite: true,
         lastContacted: new Date('9/11/2019'),
         inTrash: false,
-        label: 'Mazda',
+        label: 'Friends',
     },
     {
         id: 75,
@@ -2544,7 +2544,7 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('2/5/2016'),
         inTrash: false,
-        label: 'Mazda',
+        label: 'Friends',
     },
     {
         id: 76,
@@ -2596,7 +2596,7 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('10/17/2017'),
         inTrash: false,
-        label: 'Mitsubishi',
+        label: 'Family',
     },
     {
         id: 77,
@@ -2641,7 +2641,7 @@ export const Contacts: Contact[] = [
         favorite: true,
         lastContacted: new Date('4/21/2021'),
         inTrash: true,
-        label: 'Mercedes-Benz',
+        label: 'Work',
     },
     {
         id: 78,
@@ -2693,7 +2693,7 @@ export const Contacts: Contact[] = [
         favorite: true,
         lastContacted: new Date('7/1/2014'),
         inTrash: true,
-        label: 'Mazda',
+        label: 'Friends',
     },
     {
         id: 79,
@@ -2762,7 +2762,7 @@ export const Contacts: Contact[] = [
         favorite: true,
         lastContacted: new Date('2/16/2019'),
         inTrash: true,
-        label: 'Mazda',
+        label: 'Friends',
     },
     {
         id: 81,
@@ -2800,7 +2800,7 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('7/22/2015'),
         inTrash: true,
-        label: 'Mercedes-Benz',
+        label: 'Work',
     },
     {
         id: 82,
@@ -2816,7 +2816,7 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('11/23/2019'),
         inTrash: true,
-        label: 'Mercedes-Benz',
+        label: 'Work',
     },
     {
         id: 83,
@@ -2906,7 +2906,7 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('10/29/2019'),
         inTrash: false,
-        label: 'Volkswagen',
+        label: 'Family',
     },
     {
         id: 85,
@@ -2967,7 +2967,7 @@ export const Contacts: Contact[] = [
         favorite: true,
         lastContacted: new Date('3/21/2016'),
         inTrash: false,
-        label: 'Mazda',
+        label: 'Friends',
     },
     {
         id: 87,
@@ -3036,7 +3036,7 @@ export const Contacts: Contact[] = [
         favorite: true,
         lastContacted: new Date('10/22/2019'),
         inTrash: true,
-        label: 'Mazda',
+        label: 'Friends',
     },
     {
         id: 89,
@@ -3067,7 +3067,7 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('2/11/2017'),
         inTrash: false,
-        label: 'Mazda',
+        label: 'Friends',
     },
     {
         id: 90,
@@ -3112,7 +3112,7 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('8/30/2014'),
         inTrash: false,
-        label: 'Mazda',
+        label: 'Friends',
     },
     {
         id: 91,
@@ -3168,7 +3168,7 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('4/18/2019'),
         inTrash: true,
-        label: 'Mazda',
+        label: 'Friends',
     },
     {
         id: 94,
@@ -3192,7 +3192,7 @@ export const Contacts: Contact[] = [
         favorite: true,
         lastContacted: new Date('7/13/2016'),
         inTrash: true,
-        label: 'Mazda',
+        label: 'Friends',
     },
     {
         id: 95,
@@ -3275,7 +3275,7 @@ export const Contacts: Contact[] = [
         favorite: true,
         lastContacted: new Date('9/25/2017'),
         inTrash: true,
-        label: 'Mercedes-Benz',
+        label: 'Work',
     },
     {
         id: 97,
@@ -3299,7 +3299,7 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('7/26/2017'),
         inTrash: true,
-        label: 'Mercedes-Benz',
+        label: 'Work',
     },
     {
         id: 98,
@@ -3399,7 +3399,7 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('10/23/2020'),
         inTrash: true,
-        label: 'Mazda',
+        label: 'Friends',
     },
     {
         id: 101,
@@ -3444,7 +3444,7 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('7/3/2018'),
         inTrash: true,
-        label: 'Mazda',
+        label: 'Friends',
     },
     {
         id: 102,
@@ -3460,7 +3460,7 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('7/12/2016'),
         inTrash: false,
-        label: 'Mercedes-Benz',
+        label: 'Work',
     },
     {
         id: 103,
@@ -3545,7 +3545,7 @@ export const Contacts: Contact[] = [
         favorite: true,
         lastContacted: new Date('6/23/2014'),
         inTrash: false,
-        label: 'Mazda',
+        label: 'Friends',
     },
     {
         id: 106,
@@ -3569,7 +3569,7 @@ export const Contacts: Contact[] = [
         favorite: true,
         lastContacted: new Date('12/17/2019'),
         inTrash: false,
-        label: 'Mazda',
+        label: 'Friends',
     },
     {
         id: 107,
@@ -3666,7 +3666,7 @@ export const Contacts: Contact[] = [
         favorite: true,
         lastContacted: new Date('9/9/2020'),
         inTrash: true,
-        label: 'Mercedes-Benz',
+        label: 'Work',
     },
     {
         id: 109,
@@ -3704,7 +3704,7 @@ export const Contacts: Contact[] = [
         favorite: true,
         lastContacted: new Date('9/20/2018'),
         inTrash: true,
-        label: 'Mazda',
+        label: 'Friends',
     },
     {
         id: 110,
@@ -3756,7 +3756,7 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('9/25/2018'),
         inTrash: false,
-        label: 'Mazda',
+        label: 'Friends',
     },
     {
         id: 111,
@@ -3819,7 +3819,7 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('11/15/2015'),
         inTrash: true,
-        label: 'Mazda',
+        label: 'Friends',
     },
     {
         id: 114,
@@ -3864,7 +3864,7 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('4/1/2019'),
         inTrash: true,
-        label: 'Mazda',
+        label: 'Friends',
     },
     {
         id: 115,
@@ -3948,7 +3948,7 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('10/16/2016'),
         inTrash: true,
-        label: 'Mercedes-Benz',
+        label: 'Work',
     },
     {
         id: 118,
@@ -4000,7 +4000,7 @@ export const Contacts: Contact[] = [
         favorite: true,
         lastContacted: new Date('6/8/2020'),
         inTrash: true,
-        label: 'Mercedes-Benz',
+        label: 'Work',
     },
     {
         id: 119,
@@ -4038,7 +4038,7 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('3/1/2021'),
         inTrash: true,
-        label: 'Mazda',
+        label: 'Friends',
     },
     {
         id: 120,
@@ -4054,7 +4054,7 @@ export const Contacts: Contact[] = [
         favorite: true,
         lastContacted: new Date('11/28/2016'),
         inTrash: true,
-        label: 'Mercedes-Benz',
+        label: 'Work',
     },
     {
         id: 121,
@@ -4106,7 +4106,7 @@ export const Contacts: Contact[] = [
         favorite: true,
         lastContacted: new Date('7/4/2015'),
         inTrash: true,
-        label: 'Mazda',
+        label: 'Friends',
     },
     {
         id: 122,
@@ -4138,7 +4138,7 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('12/4/2018'),
         inTrash: true,
-        label: 'Mazda',
+        label: 'Friends',
     },
     {
         id: 124,
@@ -4221,7 +4221,7 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('1/2/2018'),
         inTrash: true,
-        label: 'Mazda',
+        label: 'Friends',
     },
     {
         id: 126,
@@ -4266,7 +4266,7 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('8/15/2016'),
         inTrash: false,
-        label: 'Mazda',
+        label: 'Friends',
     },
     {
         id: 127,
