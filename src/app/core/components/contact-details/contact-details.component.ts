@@ -1,6 +1,6 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Contact } from '../../models/contact.model';
 
 @Component({
@@ -12,7 +12,7 @@ export class ContactDetailsComponent implements OnInit {
     public editMode: boolean;
     public contactForm: FormGroup;
     public contact: Contact;
-    constructor(private fb: FormBuilder, @Inject(MAT_DIALOG_DATA) public data: Contact) {
+    constructor(private fb: FormBuilder, @Inject(MAT_DIALOG_DATA) public data: Contact, public dialog: MatDialog) {
         if(data) {
             this.contact = data;
             this.editMode = false;

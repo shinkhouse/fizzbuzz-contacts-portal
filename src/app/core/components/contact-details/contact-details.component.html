@@ -1,12 +1,16 @@
 <div class="contact-details" *ngIf="contact && !editMode">
     <mat-toolbar fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="16px">
-        <span>{{contact?.firstName}} {{contact?.lastName}}</span>
-        <mat-chip-list *ngIf="false">
-            <mat-chip>
-                <mat-icon class="material-icons-outlined">label</mat-icon>
-                No Label
-            </mat-chip>
-        </mat-chip-list>
+        <div class="profile-icon">
+            <span> {{ contact.firstName.substr(0, 1) }}</span>
+        </div>
+        <div fxLayout="column" fxLayoutGap="8px">
+            <span>{{contact?.firstName}} {{contact?.lastName}}</span>
+            <mat-chip-list *ngIf="contact.label">
+                <mat-chip>
+                    {{contact.label}}
+                </mat-chip>
+            </mat-chip-list>
+        </div>
         <div fxFlex></div>
         <div class="action-buttons">
             <button mat-icon-button>
@@ -20,13 +24,37 @@
             <button mat-icon-button (click)="$event.stopPropagation()">
                 <mat-icon>more_vert</mat-icon>
             </button>
-            <button mat-icon-button>
+            <button mat-icon-button (click)="dialog.closeAll()">
                 <mat-icon>close</mat-icon>
             </button>
         </div>
     </mat-toolbar>
-    <div class="detail-section">
+    <div class="detail-section" fxLayout="column" fxLayoutGap="16px">
         <h2>Contact Details</h2>
+        <div fxLayout="row" fxLayoutAlign="start center">
+            <mat-icon>business</mat-icon>
+            <div fxLayout="row">
+                {{contact.jobTitle}} {{contact.companyName}}
+            </div>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="start center">
+            <mat-icon>email</mat-icon>
+            <div fxLayout="row">
+                <a href="mailto:{{contact.email}}">{{contact.email}}</a>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="start center">
+            <mat-icon>phone</mat-icon>
+            <div fxLayout="row">
+                <a href="tel:{{contact.phone}}">{{contact.phone}}</a>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="start center">
+            <mat-icon>cake</mat-icon>
+            <div fxLayout="row">
+                {{contact.birthday | date}}
+            </div>
+        </div>
     </div>
 </div>
 <div class="edit-contact-details" *ngIf="editMode">

@@ -1,27 +1,62 @@
 mat-toolbar {
-    background: white;
-    border-bottom: 1px solid rgba(0,0,0,.12);
+    // background: white;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
 
     &.footer {
-        border-top: 1px solid rgba(0,0,0,.12);
+        border-top: 1px solid rgba(0, 0, 0, 0.12);
+    }
+}
+
+.contact-details {
+    mat-toolbar {
+        padding: 24px;
+        height: 108px;
     }
 }
 
 mat-icon {
-    color: rgba(0,0,0,.54);
+    color: rgba(0, 0, 0, 0.54);
 }
 
-mat-chip, mat-chip:hover, mat-chip:focus, .mat-chip {
+mat-chip,
+mat-chip:hover,
+mat-chip:focus,
+.mat-chip {
     background: white !important;
-    border: 1px solid rgba(0,0,0,.12);
+    border: 1px solid rgba(0, 0, 0, 0.12);
 
     & mat-icon {
         margin-right: 8px;
     }
 }
 
-form, .detail-section {
-    padding: 16px;
+form,
+.detail-section {
+    padding: 24px;
     overflow: auto;
     max-width: 720px;
+}
+
+.detail-section {
+    > div {
+        & mat-icon {
+            margin: 0px 24px;
+        }
+    }
+}
+
+.profile-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--color-primary);
+    border-radius: 60px;
+    text-align: center;
+
+    & span {
+        // margin: 12px;
+        color: white;
+        font-size: 24px;
+        line-height: 60px;
+        text-align: center;
+    }
 }
