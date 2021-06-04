@@ -73,9 +73,15 @@ html, body {
     --color-accent: #{mat.get-color-from-palette(map-get($contacts-clone-theme, accent))};
     --hover-color-primary: #{transparentize(mat.get-color-from-palette(map-get($contacts-clone-theme, primary)), .88)};
     --hover-color-accent: #{transparentize(mat.get-color-from-palette(map-get($contacts-clone-theme, accent)), .88)};
-    --text-color: rgba(0,0,0,.87);
-    --background: #{mat.get-color-from-palette($contacts-clone-primary-dark, 'lighter-contrast')};
-    --border-color: rgba(0,0,0,.12);
+    --hover-color: #{rgba(black, .06)};
+    --border-color: #{mat.get-color-from-palette(map-get($contacts-clone-theme, foreground), divider)};
+    --background-color-card: #{mat.get-color-from-palette(map-get($contacts-clone-theme, background), card)};
+    --background-color: #{mat.get-color-from-palette(map-get($contacts-clone-theme, background), background)};
+    --background-color-table-stripe: #{map_get(mat.$grey-palette, 200)};
+    --text-color-primary: #{rgba(black, 0.87)};
+    --text-color-secondary: #{rgba(black, 0.54)};
+    --text-color-disabled: #{rgba(black, 0.38)};
+    --header-search-field: rgba(241, 243, 244, 1);
 }
 
 body.dark {
@@ -84,15 +90,22 @@ body.dark {
     --color-accent: #{mat.get-color-from-palette(map-get($contacts-clone-theme-dark, accent))};
     --hover-color-primary: #{transparentize(mat.get-color-from-palette(map-get($contacts-clone-theme-dark, primary)), .88)};
     --hover-color-accent: #{transparentize(mat.get-color-from-palette(map-get($contacts-clone-theme-dark, accent)), .88)};
-    --text-color: #{mat.get-color-from-palette($contacts-clone-primary-dark, 'darker-contrast')};
-    --background: #{mat.get-color-from-palette($contacts-clone-primary, 'lighter-contrast')};
-    --border-color: rgba(255,255,255,.12);
+    --hover-color: #{rgba(white, .06)};
+    --border-color: #{mat.get-color-from-palette(map-get($contacts-clone-theme-dark, foreground), divider)};
+    --background-color-card: #{mat.get-color-from-palette(map-get($contacts-clone-theme-dark, background), card)};
+    --background-color: #{mat.get-color-from-palette(map-get($contacts-clone-theme-dark, background), background)};
+    --background-color-table-stripe: #{map_get(mat.$grey-palette, 200)};
+    --text-color-primary: #{rgba(white, 0.87)};
+    --text-color-secondary: #{rgba(white, 0.54)};
+    --text-color-disabled: #{rgba(white, 0.38)};
+    --header-search-field: rgba(241, 243, 244, 1);
+    --header-search-field: rgba(241, 243, 244, 0.24);
 
 
 }
 
 .mat-drawer-container {
-    // background: white;
+    // background: var(--background-color);
     height: calc(100% - 64px);
     mat-drawer {
         width: 285px;

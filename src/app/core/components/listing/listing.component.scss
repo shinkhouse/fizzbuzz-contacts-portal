@@ -16,7 +16,7 @@
 }
 
 .contact-header {
-    color: var(--text-color);
+    color: var(--text-color-secondary);
     // background: white;
     position: sticky;
     top: 0;
@@ -41,7 +41,7 @@
     }
 
     &:hover {
-        background: rgba(0,0,0,.06);
+        background: var(--hover-color);
         cursor: pointer;
 
         .action-buttons {

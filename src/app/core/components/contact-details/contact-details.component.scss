@@ -1,9 +1,9 @@
 mat-toolbar {
-    // background: white;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    background: var(--background-color-card) !important;
+    border-bottom: 1px solid -var(--border-color);
 
     &.footer {
-        border-top: 1px solid rgba(0, 0, 0, 0.12);
+        border-top: 1px solid -var(--border-color);
     }
 }
 
@@ -15,15 +15,15 @@ mat-toolbar {
 }
 
 mat-icon {
-    color: rgba(0, 0, 0, 0.54);
+    color: var(--text-color-secondary);
 }
 
 mat-chip,
 mat-chip:hover,
 mat-chip:focus,
 .mat-chip {
-    background: white !important;
-    border: 1px solid rgba(0, 0, 0, 0.12);
+    background: var(--background-color) !important;
+    border: 1px solid var(--border-color);
 
     & mat-icon {
         margin-right: 8px;

@@ -2,7 +2,7 @@
     width: 24px;
 }
 mat-toolbar {
-    background: white;
+    background: var(--background-color);
     // width: 90%;
     // border-bottom: 1px solid red;
     color: rgba(0,0,0,.67);
@@ -33,7 +33,7 @@ mat-toolbar {
 
 .search-field {
     height: 48px;
-    background: #f1f3f4;
+    background: var(--header-search-field);
     border-radius: 8px;
     max-width: 720px;
     flex: 1 1 auto;
@@ -43,6 +43,7 @@ mat-toolbar {
     }
 
     input {
+        color: var(--text-color-primary);
         font-size: 16px;
         margin: 0px 4px;
         height: 100%;
