@@ -20,7 +20,7 @@ export interface Contact {
     favorite: boolean;
     lastContacted: Date;
     inTrash?: boolean;
-    label?: string;
+    label?: string | null;
     labelId?: string;
 }
 
