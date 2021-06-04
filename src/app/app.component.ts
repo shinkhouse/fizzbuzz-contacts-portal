@@ -20,6 +20,7 @@ import { ContactsService } from './core/services/contacts.service';
 })
 export class AppComponent implements OnInit {
     public contactsLength = this.contacts.getContacts().length;
+    public contactTags = this.contacts.getContactTags();
     public drawerMode: MatDrawerMode;
     public isDrawerOpen: boolean;
     @ViewChild('drawer') drawer: MatSidenav;
