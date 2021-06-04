@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { TagRoutingModule } from './tag-routing.module';
 import { TagComponent } from './tag.component';
+import { ListingModule } from 'src/app/core/components/listing/listing.module';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { TagComponent } from './tag.component';
   ],
   imports: [
     CommonModule,
-    TagRoutingModule
+    TagRoutingModule,
+    ListingModule
   ]
 })
 export class TagModule { }
