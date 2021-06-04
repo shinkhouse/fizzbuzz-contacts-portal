@@ -34,8 +34,12 @@
                                 <span>Labels</span>
                             </mat-panel-title>
                         </mat-expansion-panel-header>
+                        <mat-list-item routerLink="/tag/{{label}}" *ngFor="let label of contactTags" routerLinkActive="active">
+                            <mat-icon class="material-icons-outlined"> label </mat-icon>
+                            <span>{{label}}</span>
+                        </mat-list-item>
                         <mat-list-item routerLinkActive="active">
-                            <mat-icon> add </mat-icon>
+                            <mat-icon>add </mat-icon>
                             <span>Add Label</span>
                         </mat-list-item>
                     </mat-expansion-panel>
@@ -49,7 +53,7 @@
 
                 <hr />
                 <mat-list-item routerLink="/other" routerLinkActive="active">
-                    <mat-icon> cake </mat-icon>
+                    <mat-icon>archive</mat-icon>
                     <span>Other Contacts</span>
                 </mat-list-item>
                 <mat-list-item routerLink="/trash" routerLinkActive="active">
