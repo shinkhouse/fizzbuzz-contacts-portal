@@ -16,13 +16,13 @@ export class ContactsService {
             } else {
                 return -1;
             }
-        })
+        });
     }
 
     getFavoriteContacts(): Contact[] {
         return this.contacts.filter((contact: Contact, index: number) => {
             return contact.favorite === true;
-        })
+        });
     }
 
     getFrequentContacts(): Contact[] {
@@ -38,7 +38,7 @@ export class ContactsService {
     getContactsInTrash(): Contact[] {
         return this.contacts.filter((contact: Contact, index: number) => {
             return contact.inTrash === true;
-        })
+        });
     }
 
     getContactById(contactId: number): Contact | undefined {
@@ -51,4 +51,29 @@ export class ContactsService {
         return this.contacts;
     }
 
+    getContactsByTag(label: string) {
+        return this.contacts.filter((contact: Contact, index: number) => {
+            return contact.label === label;
+        });
+    }
+
+    getContactTags() {
+        let tags: any[] = [];
+        tags = this.contacts.map((contact) => {
+            return contact.label;
+        }).filter((label) => {
+            console.log('label', label,typeof label === 'string');
+            return label != null;
+        });
+
+        return tags.reduce((a, b) => {
+            if (a.indexOf(b) < 0) {
+                if (typeof b === 'string') {
+                    a.push(b);
+                }
+            }
+            return a;
+        }, []);
+        return tags;
+    }
 }
