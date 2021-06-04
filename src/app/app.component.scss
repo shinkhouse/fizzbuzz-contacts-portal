@@ -20,12 +20,13 @@ main {
 
 hr {
     border-width: 1px 0px 0px 0px;
-    border-color: rgba(0, 0, 0, 0.12);
+    border-color: var(--border-color);
 }
 mat-list-item {
     height: 40px !important;
     border-radius: 0px 36px 36px 0px;
     width: calc(100% - 16px) !important;
+    color: rgba(0,0,0,.54);
     & mat-icon {
         width: 18px;
         height: 18px;
