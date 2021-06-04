@@ -12,25 +12,27 @@ import {
 } from '@angular/material/sidenav';
 import { DomSanitizer } from '@angular/platform-browser';
 import { ContactsService } from './core/services/contacts.service';
+import { SidenavigationService } from './core/services/sidenavigation.service';
 
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss'],
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, AfterViewInit {
     public contactsLength = this.contacts.getContacts().length;
     public contactTags = this.contacts.getContactTags();
     public drawerMode: MatDrawerMode;
     public isDrawerOpen: boolean;
-    @ViewChild('drawer') drawer: MatSidenav;
+    @ViewChild('drawer') drawer: MatDrawer;
 
     constructor(
         private matIconRegistry: MatIconRegistry,
         private domSanitizer: DomSanitizer,
         private mediaMatcher: MediaMatcher,
         private breakpointObserver: BreakpointObserver,
-        public contacts: ContactsService
+        public contacts: ContactsService,
+        private sidenav: SidenavigationService
     ) {
         this.matIconRegistry.addSvgIcon(
             'fizz_buzz',
@@ -44,16 +46,22 @@ export class AppComponent implements OnInit {
         layoutChanges.subscribe((result) => {
             console.log(result);
                 if (result.matches) {
-                    this.drawerMode;
+                    this.drawerMode = 'over';
                     this.isDrawerOpen = false;
                 } else {
                     this.drawerMode = 'side';
                     this.isDrawerOpen = true;
                 }
         });
+
+        this.sidenav.setSidenav(this.drawer);
     }
 
     ngOnInit(): void {
         // this.drawer.open();
+    }
+
+    ngAfterViewInit() {
+        this.sidenav.setSidenav(this.drawer);
     }
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SidenavigationService } from '../../services/sidenavigation.service';
 
 @Component({
     selector: 'app-header',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
     public searchTextInput: string;
-    constructor() {}
+    constructor(private sidenav: SidenavigationService) {}
 
     ngOnInit(): void {}
+
+    toggleSidenav() {
+        this.sidenav.toggle();
+    }
 
     clearSearchField(): void {
         this.searchTextInput = '';

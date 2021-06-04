@@ -13,6 +13,7 @@ import {MatButtonModule} from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { ContactDetailsModule } from './core/components/contact-details/contact-details.module';
 import {MatExpansionModule} from '@angular/material/expansion';
+import { SidenavigationService } from './core/services/sidenavigation.service';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
     ContactDetailsModule,
     MatExpansionModule
   ],
-  providers: [],
+  providers: [SidenavigationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
