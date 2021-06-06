@@ -20,11 +20,14 @@ export class ListingComponent implements OnInit {
 
     ngOnInit(): void {}
 
-    openContactDetails(contactDetails: Contact) {
+    openContactDetails(contactDetails: Contact, editMode: boolean) {
         this.dialog.open(ContactDetailsComponent, {
             minWidth: '700px',
             panelClass: 'contact-modal',
-            data: contactDetails,
+            data: {
+                contact:contactDetails,
+                editMode: editMode
+            }
         });
     }
 

@@ -21,7 +21,7 @@
         fxLayout="row"
         fxLayoutAlign="start center"
         *ngFor="let contact of contactList; let index = index"
-        (click)="openContactDetails(contact)"
+        (click)="openContactDetails(contact, false)"
     >
         <div
             class="full-name"
@@ -60,7 +60,7 @@
                 <button
                     mat-icon-button
                     (click)="
-                        openContactDetails(contact); $event.stopPropagation()
+                        openContactDetails(contact, true); $event.stopPropagation()
                     "
                 >
                     <mat-icon>edit</mat-icon>
