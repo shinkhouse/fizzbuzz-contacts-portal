@@ -37,7 +37,7 @@ export class AppComponent implements OnInit, AfterViewInit {
         this.matIconRegistry.addSvgIcon(
             'fizz_buzz',
             this.domSanitizer.bypassSecurityTrustResourceUrl(
-                '../assets/icons/fizz-buzz.svg'
+                './assets/icons/fizz-buzz.svg'
             )
         );
         const layoutChanges = breakpointObserver.observe([
