@@ -80,4 +80,20 @@ export class ContactDetailsComponent implements OnInit {
             label: [this.contact.label]
         });
     }
+
+    toggleEditMode() {
+        this.editMode = !this.editMode;
+    }
+
+    toggleFavorite() {
+        this.contact.favorite = !this.contact.favorite;
+    }
+
+    cancelForm() {
+        if(this.contact) {
+            this.toggleEditMode();
+        } else {
+            this.dialog.closeAll();
+        }
+    }
 }
