@@ -49,6 +49,17 @@
                 <a href="tel:{{contact.phone}}">{{contact.phone}}</a>
             </div>
         </div>
+        <div fxLayout="row" fxLayoutAlign="start start">
+            <mat-icon>place</mat-icon>
+            <div fxLayout="column" fxLayoutGap="16px">
+                <div fxLayout="column" *ngFor="let address of contact.addresses">
+                    <p>{{address.addressLine1}}</p>
+                    <p *ngIf="address.addressLine2">{{address.addressLine2}}</p>
+                    <p>{{address.city}} {{address.state}} {{address.zipCode}}</p>
+                    <p>{{address.country}}</p>
+                </div>
+            </div>
+        </div>
         <div fxLayout="row" fxLayoutAlign="start center">
             <mat-icon>cake</mat-icon>
             <div fxLayout="row">

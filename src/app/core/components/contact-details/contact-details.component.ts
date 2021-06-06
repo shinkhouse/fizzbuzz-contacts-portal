@@ -12,10 +12,10 @@ export class ContactDetailsComponent implements OnInit {
     public editMode: boolean;
     public contactForm: FormGroup;
     public contact: Contact;
-    constructor(private fb: FormBuilder, @Inject(MAT_DIALOG_DATA) public data: Contact, public dialog: MatDialog) {
+    constructor(private fb: FormBuilder, @Inject(MAT_DIALOG_DATA) public data: any, public dialog: MatDialog) {
         if(data) {
-            this.contact = data;
-            this.editMode = false;
+            this.contact = data.contact;
+            this.editMode = data.editMode;
             this.initializeContactEditForm();
         } else {
             this.editMode = true;
