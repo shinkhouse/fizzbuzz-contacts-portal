@@ -191,7 +191,7 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('2/25/2016'),
         inTrash: false,
-        label: 'FeFamily',
+        label: 'Family',
     },
     {
         id: 7,
@@ -236,7 +236,7 @@ export const Contacts: Contact[] = [
         favorite: true,
         lastContacted: new Date('9/23/2018'),
         inTrash: false,
-        label: 'Non-binary',
+        label: 'Work',
     },
     {
         id: 8,
@@ -345,7 +345,7 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('12/22/2016'),
         inTrash: false,
-        label: 'Non-binary',
+        label: 'Work',
     },
     {
         id: 12,
@@ -461,7 +461,7 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('7/10/2016'),
         inTrash: true,
-        label: 'Non-binary',
+        label: 'Work',
     },
     {
         id: 16,
@@ -620,7 +620,7 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('6/8/2017'),
         inTrash: true,
-        label: 'Non-binary',
+        label: 'Work',
     },
     {
         id: 20,
@@ -720,7 +720,7 @@ export const Contacts: Contact[] = [
         favorite: true,
         lastContacted: new Date('5/4/2020'),
         inTrash: false,
-        label: 'Non-binary',
+        label: 'Work',
     },
     {
         id: 23,
@@ -1018,7 +1018,7 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('4/23/2018'),
         inTrash: false,
-        label: 'FeFamily',
+        label: 'Family',
     },
     {
         id: 32,
@@ -1194,7 +1194,7 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('1/15/2020'),
         inTrash: false,
-        label: 'Non-binary',
+        label: 'Work',
     },
     {
         id: 37,
@@ -1218,7 +1218,7 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('8/4/2018'),
         inTrash: true,
-        label: 'Non-binary',
+        label: 'Work',
     },
     {
         id: 38,
@@ -1970,7 +1970,7 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('5/13/2020'),
         inTrash: true,
-        label: 'Non-binary',
+        label: 'Work',
     },
     {
         id: 58,
@@ -2055,7 +2055,7 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('2/2/2021'),
         inTrash: true,
-        label: 'Non-binary',
+        label: 'Work',
     },
     {
         id: 61,
@@ -2249,7 +2249,7 @@ export const Contacts: Contact[] = [
         favorite: true,
         lastContacted: new Date('3/21/2016'),
         inTrash: true,
-        label: 'Non-binary',
+        label: 'Work',
     },
     {
         id: 65,
@@ -2317,7 +2317,7 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('2/12/2020'),
         inTrash: false,
-        label: 'Non-binary',
+        label: 'Work',
     },
     {
         id: 67,
@@ -2423,7 +2423,7 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('11/6/2019'),
         inTrash: false,
-        label: 'Non-binary',
+        label: 'Work',
     },
     {
         id: 70,
@@ -2667,7 +2667,7 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('7/21/2017'),
         inTrash: true,
-        label: 'FeFamily',
+        label: 'Family',
     },
     {
         id: 77,
@@ -3160,7 +3160,7 @@ export const Contacts: Contact[] = [
         favorite: true,
         lastContacted: new Date('7/1/2020'),
         inTrash: false,
-        label: 'Non-binary',
+        label: 'Work',
     },
     {
         id: 90,
@@ -3312,7 +3312,7 @@ export const Contacts: Contact[] = [
         favorite: true,
         lastContacted: new Date('8/30/2020'),
         inTrash: true,
-        label: 'Non-binary',
+        label: 'Work',
     },
     {
         id: 94,
@@ -3374,7 +3374,7 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('11/17/2016'),
         inTrash: false,
-        label: 'FeFamily',
+        label: 'Family',
     },
     {
         id: 96,
@@ -3414,7 +3414,7 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('1/21/2018'),
         inTrash: false,
-        label: 'Non-binary',
+        label: 'Work',
     },
     {
         id: 98,
@@ -3651,7 +3651,7 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('6/16/2017'),
         inTrash: false,
-        label: 'FeFamily',
+        label: 'Family',
     },
     {
         id: 105,
@@ -3727,7 +3727,7 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('12/23/2016'),
         inTrash: true,
-        label: 'Non-binary',
+        label: 'Work',
     },
     {
         id: 107,
@@ -4071,7 +4071,7 @@ export const Contacts: Contact[] = [
         favorite: true,
         lastContacted: new Date('2/23/2019'),
         inTrash: true,
-        label: 'Non-binary',
+        label: 'Work',
     },
     {
         id: 117,
@@ -4216,7 +4216,7 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('12/17/2015'),
         inTrash: true,
-        label: 'FeFamily',
+        label: 'Family',
     },
     {
         id: 121,
