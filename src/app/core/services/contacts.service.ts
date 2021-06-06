@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Contacts } from '../contacts.mock';
+import { Contacts } from '../mock/contacts.mock';
 import { Contact } from '../models/contact.model';
 
 @Injectable({
