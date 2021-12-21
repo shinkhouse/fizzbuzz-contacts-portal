@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { SuggestionsRoutingModule } from './suggestions-routing.module';
 import { SuggestionsComponent } from './suggestions.component';
+import { EmptyListingModule } from 'src/app/core/components/empty-listing/empty-listing.module';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { SuggestionsComponent } from './suggestions.component';
   ],
   imports: [
     CommonModule,
-    SuggestionsRoutingModule
+    SuggestionsRoutingModule,
+    EmptyListingModule
   ]
 })
 export class SuggestionsModule { }
