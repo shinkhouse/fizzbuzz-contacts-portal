@@ -2,6 +2,7 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Contact } from '../../models/contact.model';
+import { ContactsService } from '../../services/contacts.service';
 
 @Component({
     selector: 'app-contact-details',
@@ -12,7 +13,7 @@ export class ContactDetailsComponent implements OnInit {
     public editMode: boolean;
     public contactForm: FormGroup;
     public contact: Contact;
-    constructor(private fb: FormBuilder, @Inject(MAT_DIALOG_DATA) public data: any, public dialog: MatDialog) {
+    constructor(private fb: FormBuilder, @Inject(MAT_DIALOG_DATA) public data: any, public dialog: MatDialog, public contacts: ContactsService) {
         if(data) {
             this.contact = data.contact;
             this.editMode = data.editMode;
@@ -27,6 +28,7 @@ export class ContactDetailsComponent implements OnInit {
 
     initializeNewContactForm() {
         this.contactForm = this.fb.group({
+            id: [''],
             prefix: [''],
             firstName: ['', Validators.required],
             lastName: [''],
@@ -55,6 +57,7 @@ export class ContactDetailsComponent implements OnInit {
 
     initializeContactEditForm() {
         this.contactForm = this.fb.group({
+            id: [this.contact.id],
             prefix: [this.contact.prefix],
             firstName: [this.contact.firstName, Validators.required],
             lastName: [this.contact.lastName],
@@ -87,6 +90,17 @@ export class ContactDetailsComponent implements OnInit {
 
     toggleFavorite() {
         this.contact.favorite = !this.contact.favorite;
+    }
+
+    saveForm() {
+        this.contacts.getContacts().forEach((contact) => {
+            if(contact.id === this.contact.id) {
+                contact = this.contactForm.value;
+            }
+        })
+        this.contact = this.contactForm.value;
+        this.contacts.updateContactInfo(this.contact.id, this.contact);
+        this.toggleEditMode();
     }
 
     cancelForm() {
