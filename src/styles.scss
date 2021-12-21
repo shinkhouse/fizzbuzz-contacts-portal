@@ -1,6 +1,6 @@
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
-@use '~@angular/material' as mat;
+@use "~@angular/material" as mat;
 // Plus imports for other components in your app.
 
 // Include the common styles for Angular Material. We include this here so that you only
@@ -11,14 +11,24 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$contacts-clone-primary: mat.define-palette(mat.$blue-palette, A700, 800,900);
+$contacts-clone-primary: mat.define-palette(mat.$blue-palette, A700, 800, 900);
 $contacts-clone-accent: mat.define-palette(mat.$blue-palette, 500, 300, 400);
 
 // The warn palette is optional (defaults to red).
 $contacts-clone-warn: mat.define-palette(mat.$red-palette);
 
-$contacts-clone-primary-dark: mat.define-palette(mat.$blue-palette, 400, 800,900);
-$contacts-clone-accent-dark: mat.define-palette(mat.$blue-palette, 500, 300, 400);
+$contacts-clone-primary-dark: mat.define-palette(
+    mat.$blue-palette,
+    400,
+    800,
+    900
+);
+$contacts-clone-accent-dark: mat.define-palette(
+    mat.$blue-palette,
+    500,
+    300,
+    400
+);
 
 // The warn palette is optional (defaults to red).
 $contacts-clone-warn-dark: mat.define-palette(mat.$red-palette);
@@ -52,8 +62,6 @@ $contacts-clone-theme-dark: mat.define-dark-theme(
 
 /* You can add global styles to this file, and also import other style files */
 
-
-
 * {
     box-sizing: border-box;
 }
@@ -62,21 +70,39 @@ $contacts-clone-theme-dark: mat.define-dark-theme(
     font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
     height: 100%;
     font-family: Roboto, "Helvetica Neue", sans-serif;
-    background: var(--background);
+    background: var(--background-color);
 
-    --color-primary: #{mat.get-color-from-palette(map-get($contacts-clone-theme, primary))};
-    --color-accent: #{mat.get-color-from-palette(map-get($contacts-clone-theme, accent))};
-    --hover-color-primary: #{transparentize(mat.get-color-from-palette(map-get($contacts-clone-theme, primary)), .88)};
-    --hover-color-accent: #{transparentize(mat.get-color-from-palette(map-get($contacts-clone-theme, accent)), .88)};
-    --hover-color: #{rgba(black, .06)};
-    --border-color: #{mat.get-color-from-palette(map-get($contacts-clone-theme, foreground), divider)};
-    --background-color-card: #{mat.get-color-from-palette(map-get($contacts-clone-theme, background), card)};
-    --background-color: #{mat.get-color-from-palette(map-get($contacts-clone-theme, background), background)};
+    --color-primary: #{mat.get-color-from-palette(
+            map-get($contacts-clone-theme, primary)
+        )};
+    --color-accent: #{mat.get-color-from-palette(
+            map-get($contacts-clone-theme, accent)
+        )};
+    --hover-color-primary: #{transparentize(
+            mat.get-color-from-palette(map-get($contacts-clone-theme, primary)),
+            0.88
+        )};
+    --hover-color-accent: #{transparentize(
+            mat.get-color-from-palette(map-get($contacts-clone-theme, accent)),
+            0.88
+        )};
+    --hover-color: #{rgba(black, 0.06)};
+    --border-color: #{mat.get-color-from-palette(
+            map-get($contacts-clone-theme, foreground),
+            divider
+        )};
+    --background-color-card: #{mat.get-color-from-palette(
+            map-get($contacts-clone-theme, background),
+            card
+        )};
+    // --background-color: #{mat.get-color-from-palette(map-get($contacts-clone-theme, background), background)};
+    --background-color: white;
     --background-color-table-stripe: #{map_get(mat.$grey-palette, 200)};
     --text-color-primary: #{rgba(black, 0.87)};
     --text-color-secondary: #{rgba(black, 0.54)};
@@ -86,22 +112,43 @@ html, body {
 
 body.dark {
     @include mat.all-component-themes($contacts-clone-theme-dark);
-    --color-primary: #{mat.get-color-from-palette(map-get($contacts-clone-theme-dark, primary))};
-    --color-accent: #{mat.get-color-from-palette(map-get($contacts-clone-theme-dark, accent))};
-    --hover-color-primary: #{transparentize(mat.get-color-from-palette(map-get($contacts-clone-theme-dark, primary)), .88)};
-    --hover-color-accent: #{transparentize(mat.get-color-from-palette(map-get($contacts-clone-theme-dark, accent)), .88)};
-    --hover-color: #{rgba(white, .06)};
-    --border-color: #{mat.get-color-from-palette(map-get($contacts-clone-theme-dark, foreground), divider)};
-    --background-color-card: #{mat.get-color-from-palette(map-get($contacts-clone-theme-dark, background), card)};
-    --background-color: #{mat.get-color-from-palette(map-get($contacts-clone-theme-dark, background), background)};
+    --color-primary: #{mat.get-color-from-palette(
+            map-get($contacts-clone-theme-dark, primary)
+        )};
+    --color-accent: #{mat.get-color-from-palette(
+            map-get($contacts-clone-theme-dark, accent)
+        )};
+    --hover-color-primary: #{transparentize(
+            mat.get-color-from-palette(
+                map-get($contacts-clone-theme-dark, primary)
+            ),
+            0.88
+        )};
+    --hover-color-accent: #{transparentize(
+            mat.get-color-from-palette(
+                map-get($contacts-clone-theme-dark, accent)
+            ),
+            0.88
+        )};
+    --hover-color: #{rgba(white, 0.06)};
+    --border-color: #{mat.get-color-from-palette(
+            map-get($contacts-clone-theme-dark, foreground),
+            divider
+        )};
+    --background-color-card: #{mat.get-color-from-palette(
+            map-get($contacts-clone-theme-dark, background),
+            card
+        )};
+    --background-color: #{mat.get-color-from-palette(
+            map-get($contacts-clone-theme-dark, background),
+            background
+        )};
     --background-color-table-stripe: #{map_get(mat.$grey-palette, 200)};
     --text-color-primary: #{rgba(white, 0.87)};
     --text-color-secondary: #{rgba(white, 0.54)};
     --text-color-disabled: #{rgba(white, 0.38)};
     --header-search-field: rgba(241, 243, 244, 1);
     --header-search-field: rgba(241, 243, 244, 0.24);
-
-
 }
 
 .mat-drawer-container {
@@ -148,5 +195,21 @@ mat-expansion-panel.mat-expansion-panel {
     }
     & .mat-expansion-panel-body {
         padding: 0px !important;
+    }
+}
+
+.profile-icon {
+    width: 36px;
+    height: 36px;
+    background: var(--color-primary);
+    border-radius: 36px;
+    text-align: center;
+
+    & span {
+        // margin: 12px;
+        color: white;
+        font-size: 16px;
+        line-height: 38px;
+        text-align: center;
     }
 }
