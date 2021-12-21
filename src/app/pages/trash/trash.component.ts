@@ -1,15 +1,21 @@
 import { Component, OnInit } from '@angular/core';
+import { Contact } from 'src/app/core/models/contact.model';
+import { ContactsService } from 'src/app/core/services/contacts.service';
 
 @Component({
-  selector: 'app-trash',
-  templateUrl: './trash.component.html',
-  styleUrls: ['./trash.component.scss']
+    selector: 'app-trash',
+    templateUrl: './trash.component.html',
+    styleUrls: ['./trash.component.scss'],
 })
 export class TrashComponent implements OnInit {
+    public contactList: Contact[];
+    constructor(private contacts: ContactsService) {}
 
-  constructor() { }
+    ngOnInit(): void {
+        this.getContacts();
+    }
 
-  ngOnInit(): void {
-  }
-
+    getContacts() {
+        this.contactList = this.contacts.getContactsInTrash();
+    }
 }
