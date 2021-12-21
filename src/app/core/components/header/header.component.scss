@@ -5,7 +5,7 @@ mat-toolbar {
     background: var(--background-color);
     // width: 90%;
     // border-bottom: 1px solid red;
-    color: rgba(0,0,0,.67);
+    color: rgba(0, 0, 0, 0.67);
     .title-section {
         min-width: 268px;
         padding-right: 88px;
@@ -42,15 +42,28 @@ mat-toolbar {
         margin: 0px 4px;
     }
 
-    input {
-        color: var(--text-color-primary);
-        font-size: 16px;
-        margin: 0px 4px;
-        height: 100%;
-        flex: 1 1 auto;
-        background: transparent;
-        border: 0px;
-        outline: none;
+    form {
+        width: 100%;
+        input {
+            color: var(--text-color-primary);
+            font-size: 16px;
+            margin: 0px 4px;
+            // height: 100%;
+            flex: 1 1 auto;
+            background: transparent;
+            border: 0px;
+            outline: none;
+            width: 100%;
+        }
+    }
+}
+
+.option-container {
+    display: flex;
+    flex-direction: column;
+
+    span {
+        line-height: 16px;
     }
 }
 

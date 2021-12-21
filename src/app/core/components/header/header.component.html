@@ -14,12 +14,26 @@
         <button mat-icon-button>
             <mat-icon>search</mat-icon>
         </button>
-        <input
-            type="text"
-            [(ngModel)]="searchTextInput"
-            placeholder="Search"
-            fxFlex
-        />
+        <form class="example-form">
+            <input
+                type="text"
+                placeholder="Search"
+                matInput
+                [formControl]="myControl"
+                [matAutocomplete]="auto"
+            />
+            <mat-autocomplete #auto="matAutocomplete" [displayWith]="contactDisplayFn">
+                <mat-option
+                    *ngFor="let option of filteredOptions | async"
+                    [value]="option"
+                >
+                    <div class="option-container">
+                        <span>{{ option.firstName }} {{ option.lastName }}</span>    
+                        <small class="mat-caption">{{option.jobTitle}}</small>
+                    </div>
+                </mat-option>
+            </mat-autocomplete>
+        </form>
         <button
             mat-icon-button
             (click)="clearSearchField()"
