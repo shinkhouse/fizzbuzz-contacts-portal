@@ -1,5 +1,9 @@
 export const Countries: any = [
     {
+        country: 'United States',
+        abbreviation: 'US',
+    },
+    {
         country: 'Afghanistan',
         abbreviation: 'AF',
     },
@@ -922,10 +926,6 @@ export const Countries: any = [
     {
         country: 'United Kingdom',
         abbreviation: 'UK',
-    },
-    {
-        country: 'United States',
-        abbreviation: 'US',
     },
     {
         country: 'United States Minor Outlying Islands',
