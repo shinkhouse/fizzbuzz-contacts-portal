@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, Inject, OnInit, ViewChild } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { Contact } from '../../models/contact.model';
 import { ContactsService } from '../../services/contacts.service';
 import { SidenavigationService } from '../../services/sidenavigation.service';
 import { filter, map, startWith } from 'rxjs/operators';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
     selector: 'app-header',
@@ -19,7 +20,8 @@ export class HeaderComponent implements OnInit {
 
     constructor(
         private sidenav: SidenavigationService,
-        private contacts: ContactsService
+        private contacts: ContactsService,
+        @Inject(DOCUMENT) private document: Document
     ) {}
 
     ngOnInit() {
@@ -27,10 +29,11 @@ export class HeaderComponent implements OnInit {
         this.filteredOptions = this.myControl.valueChanges.pipe(
             startWith(''),
             map((value) => (typeof value === 'string' ? value : value.name)),
-            map((name) =>
-                this._filter(name)
-            )
+            map((name) => this._filter(name))
         );
+        if (localStorage.getItem('dark') === 'true') {
+            this.document.body.classList.add('dark');
+        } 
     }
 
     contactDisplayFn(user: Contact): string {
@@ -63,5 +66,15 @@ export class HeaderComponent implements OnInit {
 
     clearSearchField(): void {
         this.searchTextInput = '';
+    }
+
+    toggleDarkMode() {
+        if(localStorage.getItem('dark') === 'true') {
+            this.document.body.classList.remove('dark');
+            localStorage.setItem('dark', 'false');
+        } else {
+            this.document.body.classList.add('dark');
+            localStorage.setItem('dark', 'true');
+        }
     }
 }

@@ -59,6 +59,9 @@
             <mat-icon class="material-icons-outlined">settings</mat-icon>
         </button>
         <mat-menu #settingsMenu="matMenu">
+            <button (click)="toggleDarkMode()" mat-menu-item>
+                <span>Dark Mode</span>
+            </button>
             <button mat-menu-item>
                 <span>Undo changes</span>
             </button>
