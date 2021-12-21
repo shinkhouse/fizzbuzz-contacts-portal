@@ -7,6 +7,10 @@
             [mode]="drawerMode"
             [opened]="isDrawerOpen"
         >
+            <button (click)="openCreateContact()" class="add-contact-btn mat-elevation-z2" mat-button color="primary">
+                <mat-icon>add</mat-icon>
+                <span>Create contact</span>
+            </button>
             <mat-nav-list>
                 <mat-list-item routerLink="/contacts" routerLinkActive="active">
                     <mat-icon> person </mat-icon>
@@ -26,30 +30,30 @@
                     <span>Merge & Fix</span>
                 </mat-list-item>
                 <hr />
-                  <mat-accordion>
-                        <mat-expansion-panel hideToggle expanded>
+                <mat-accordion>
+                    <mat-expansion-panel hideToggle expanded>
                         <mat-expansion-panel-header>
                             <mat-panel-title>
                                 <mat-icon>label</mat-icon>
                                 <span>Labels</span>
                             </mat-panel-title>
                         </mat-expansion-panel-header>
-                        <mat-list-item routerLink="/tag/{{label}}" *ngFor="let label of contactTags" routerLinkActive="active">
-                            <mat-icon class="material-icons-outlined"> label </mat-icon>
-                            <span>{{label}}</span>
+                        <mat-list-item
+                            routerLink="/tag/{{ label }}"
+                            *ngFor="let label of contactTags"
+                            routerLinkActive="active"
+                        >
+                            <mat-icon class="material-icons-outlined">
+                                label
+                            </mat-icon>
+                            <span>{{ label }}</span>
                         </mat-list-item>
                         <mat-list-item routerLinkActive="active">
                             <mat-icon>add </mat-icon>
-                            <span>Add Label</span>
+                            <span>Create Label</span>
                         </mat-list-item>
                     </mat-expansion-panel>
-                    </mat-accordion>
-                <!-- <mat-list-item routerLink="/tag/1" routerLinkActive="active">
-                    <mat-icon>
-                        label
-                    </mat-icon>
-                    <span>Labels</span>
-                </mat-list-item> -->
+                </mat-accordion>
 
                 <hr />
                 <mat-list-item routerLink="/other" routerLinkActive="active">
@@ -64,11 +68,6 @@
         </mat-drawer>
         <mat-drawer-content>
             <router-outlet></router-outlet>
-            <!-- <div class="example-sidenav-content">
-                <button type="button" mat-button (click)="drawer.toggle()">
-                    Toggle sidenav
-                </button>
-            </div> -->
         </mat-drawer-content>
     </mat-drawer-container>
 </main>

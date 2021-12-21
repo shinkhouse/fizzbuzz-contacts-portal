@@ -4,6 +4,7 @@ import {
     MediaMatcher,
 } from '@angular/cdk/layout';
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { MatIconRegistry } from '@angular/material/icon';
 import {
     MatDrawer,
@@ -11,6 +12,8 @@ import {
     MatSidenav,
 } from '@angular/material/sidenav';
 import { DomSanitizer } from '@angular/platform-browser';
+import { ContactDetailsComponent } from './core/components/contact-details/contact-details.component';
+import { Contacts } from './core/mock/contacts.mock';
 import { ContactsService } from './core/services/contacts.service';
 import { SidenavigationService } from './core/services/sidenavigation.service';
 
@@ -32,7 +35,8 @@ export class AppComponent implements OnInit, AfterViewInit {
         private mediaMatcher: MediaMatcher,
         private breakpointObserver: BreakpointObserver,
         public contacts: ContactsService,
-        private sidenav: SidenavigationService
+        private sidenav: SidenavigationService,
+        private dialog: MatDialog
     ) {
         this.matIconRegistry.addSvgIcon(
             'fizz_buzz',
@@ -58,10 +62,19 @@ export class AppComponent implements OnInit, AfterViewInit {
     }
 
     ngOnInit(): void {
-        // this.drawer.open();
+        if(!localStorage.getItem('contacts')) {
+            localStorage.setItem('contacts', JSON.stringify(Contacts));
+        } 
     }
 
     ngAfterViewInit() {
         this.sidenav.setSidenav(this.drawer);
+    }
+
+    openCreateContact() {
+        this.dialog.open(ContactDetailsComponent, {
+            minWidth: '700px',
+            panelClass: 'contact-modal',
+        });
     }
 }
