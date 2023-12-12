@@ -4606,7 +4606,7 @@ export const Contacts: Contact[] = [
 ];
 
 export function randomRgba(): string {
-    var o = Math.round,
+    const o = Math.round,
         r = Math.random,
         min = 50,
         max = 220;

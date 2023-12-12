@@ -74,7 +74,7 @@ export class HeaderComponent implements OnInit {
 
         if (filterValue.length > 0) {
             return this.contactList.filter((option) => {
-                let fullName = option.firstName + ' ' + option.lastName;
+                const fullName = option.firstName + ' ' + option.lastName;
                 return fullName.toLowerCase().includes(filterValue);
             });
         } else {

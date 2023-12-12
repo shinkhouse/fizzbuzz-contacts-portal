@@ -67,7 +67,7 @@ export interface Address {
     zipCode?: string;
     poBox?: string;
     type?: string;
-};
+}
 
 export interface Event {
     eventDate: string;
