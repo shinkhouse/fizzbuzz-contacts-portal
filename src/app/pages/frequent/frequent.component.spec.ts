@@ -8,8 +8,8 @@ describe('FrequentComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FrequentComponent ]
-    })
+    imports: [FrequentComponent]
+})
     .compileComponents();
   });
 

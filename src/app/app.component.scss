@@ -2,8 +2,9 @@ app-header {
     width: 100%;
 }
 
-mat-sidenav-container {
+mat-drawer-container {
     width: 100%;
+    background-color: var(--background-color);
     mat-drawer {
         border: 0px;
         width: 300px;
@@ -21,41 +22,67 @@ main {
 hr {
     border-width: 1px 0px 0px 0px;
     border-color: var(--border-color);
+    width: 100%;
 }
 .add-contact-btn {
     margin: 8px 8px;
-    padding: 8px 24px;
+    padding: 16px 24px;
     border-radius: 36px;
+    height: unset;
     span {
         margin-left: 16px;
     }
 }
-mat-list-item {
-    height: 40px !important;
-    border-radius: 0px 36px 36px 0px;
-    width: calc(100% - 16px) !important;
-    color: rgba(0,0,0,.54);
-    & mat-icon {
-        width: 18px;
-        height: 18px;
-        font-size: 18px;
-        margin: 0px 20px 0px 12px;
+/* TODO(mdc-migration): The following rule targets internal classes of list that may no longer apply for the MDC version.*/
+/* TODO(mdc-migration): The following rule targets internal classes of list that may no longer apply for the MDC version.*/
+.navigation-list {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    flex: 1 1 auto;
+    padding: 16px 0px;
+    .section-header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0px 8px 0px 30px;
+        h3 {
+            margin: 0px;
+        }
     }
-
-    & span {
-        font-size: 14px;
-        font-weight: 500;
-    }
-
-    &.active {
-        background-color: var(--hover-color-primary);
-        mat-icon,
-        span {
-            color: var(--color-primary);
+    button:not(.mat-mdc-icon-button) {
+        height: 40px;
+        border-radius: 0px 36px 36px 0px;
+        width: calc(100% - 16px);
+        color: var(--text-color-primary);
+        justify-content: start;
+        padding: 0px 16px;
+        & mat-icon {
+            width: 18px;
+            height: 18px;
+            font-size: 18px;
+            margin: 0px 20px 0px 12px;
         }
 
-        &:hover, &:focus {
-            background-color: var(--hover-color-primary) !important;
+        & span {
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        &.active {
+            background-color: var(--hover-color-primary);
+            mat-icon,
+            span {
+                color: var(--color-primary);
+            }
+
+            &:hover,
+            &:focus {
+                background-color: var(--hover-color-primary) !important;
+            }
         }
     }
 }

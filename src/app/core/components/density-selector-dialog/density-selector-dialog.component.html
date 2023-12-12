@@ -1,0 +1,16 @@
+<h2 mat-dialog-title>Display Density</h2>
+<mat-dialog-content class="mat-typography">
+    <div class="image-container">
+        <img src="assets/images/comfortable.png" *ngIf="density.value === 'comfortable'" alt="Comfortable Density" />
+        <img src="assets/images/compact.png" *ngIf="density.value === 'cozy'" alt="Cozy Density" />
+    </div>
+    <mat-button-toggle-group fxLayout="row" fxLayout="start center" [formControl]="density" aria-label="Font Style">
+        <mat-button-toggle color="primary" fxFlex value="comfortable">Comfortable</mat-button-toggle>
+        <mat-button-toggle color="primary" fxFlex value="cozy">Cozy</mat-button-toggle>
+    </mat-button-toggle-group>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button color="primary" [mat-dialog-close]="density.value" cdkFocusInitial>
+        Done
+    </button>
+</mat-dialog-actions>

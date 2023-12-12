@@ -22,6 +22,12 @@ export class ContactsService {
     getFavoriteContacts(): Contact[] {
         return this.contacts.filter((contact: Contact, index: number) => {
             return contact.favorite === true;
+        }).sort((a, b) => {
+            if (a.firstName > b.firstName) {
+                return 1;
+            } else {
+                return -1;
+            }
         });
     }
 
@@ -38,6 +44,12 @@ export class ContactsService {
     getContactsInTrash(): Contact[] {
         return this.contacts.filter((contact: Contact, index: number) => {
             return contact.inTrash === true;
+        }).sort((a, b) => {
+            if (a.firstName > b.firstName) {
+                return 1;
+            } else {
+                return -1;
+            }
         });
     }
 
@@ -54,6 +66,12 @@ export class ContactsService {
     getContactsByTag(label: string) {
         return this.contacts.filter((contact: Contact, index: number) => {
             return contact.label === label;
+        }).sort((a, b) => {
+            if (a.firstName > b.firstName) {
+                return 1;
+            } else {
+                return -1;
+            }
         });
     }
 
@@ -62,7 +80,6 @@ export class ContactsService {
         tags = this.contacts.map((contact) => {
             return contact.label;
         }).filter((label) => {
-            console.log('label', label,typeof label === 'string');
             return label != null;
         });
 

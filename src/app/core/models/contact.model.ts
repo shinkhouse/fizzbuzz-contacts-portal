@@ -22,6 +22,7 @@ export interface Contact {
     inTrash?: boolean;
     label?: string | null;
     labelId?: string;
+    color: string;
 }
 
 

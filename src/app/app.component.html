@@ -7,64 +7,79 @@
             [mode]="drawerMode"
             [opened]="isDrawerOpen"
         >
-            <button (click)="openCreateContact()" class="add-contact-btn mat-elevation-z2" mat-button color="primary">
+            <button
+                (click)="openCreateContact()"
+                class="add-contact-btn mat-elevation-z2"
+                mat-button
+                color="primary"
+            >
                 <mat-icon>add</mat-icon>
                 <span>Create contact</span>
             </button>
-            <mat-nav-list>
-                <mat-list-item routerLink="/contacts" routerLinkActive="active">
-                    <mat-icon> person </mat-icon>
-                    <span>Contacts</span>
-                    <div fxFlex></div>
-                    <span>{{ contactsLength }}</span>
-                </mat-list-item>
-                <mat-list-item routerLink="/frequent" routerLinkActive="active">
-                    <mat-icon> history </mat-icon>
+            <div class="navigation-list">
+                <button
+                    mat-button
+                    routerLink="/contacts"
+                    routerLinkActive="active"
+                >
+                    <mat-icon matListItemIcon> person </mat-icon>
+                    <div fxLayout="row" fxLayoutAlign="start center" fxFlex>
+                        <span>Contacts</span>
+                        <div fxFlex="100"></div>
+                        <span>{{ contactsLength }}</span>
+                    </div>
+                </button>
+                <button
+                    mat-button
+                    routerLink="/frequent"
+                    routerLinkActive="active"
+                >
+                    <mat-icon matListItemIcon> history </mat-icon>
                     <span>Frequently Contacted</span>
-                </mat-list-item>
-                <mat-list-item
+                </button>
+                <button
+                    mat-button
                     routerLink="/suggestions"
                     routerLinkActive="active"
                 >
-                    <mat-icon> merge_type </mat-icon>
+                    <mat-icon matListItemIcon> merge_type </mat-icon>
                     <span>Merge & Fix</span>
-                </mat-list-item>
+                </button>
                 <hr />
-                <mat-accordion>
-                    <mat-expansion-panel hideToggle expanded>
-                        <mat-expansion-panel-header>
-                            <mat-panel-title>
-                                <mat-icon>label</mat-icon>
-                                <span>Labels</span>
-                            </mat-panel-title>
-                        </mat-expansion-panel-header>
-                        <mat-list-item
-                            routerLink="/tag/{{ label }}"
-                            *ngFor="let label of contactTags"
-                            routerLinkActive="active"
-                        >
-                            <mat-icon class="material-icons-outlined">
-                                label
-                            </mat-icon>
-                            <span>{{ label }}</span>
-                        </mat-list-item>
-                        <mat-list-item routerLinkActive="active">
-                            <mat-icon>add </mat-icon>
-                            <span>Create Label</span>
-                        </mat-list-item>
-                    </mat-expansion-panel>
-                </mat-accordion>
+                <div class="section-header">
+                    <h3>Labels</h3>
+                    <button mat-icon-button>
+                        <mat-icon>add</mat-icon>
+                    </button>
+                </div>
+                <button
+                    mat-button
+                    routerLink="/tag/{{ label }}"
+                    *ngFor="let label of contactTags"
+                    routerLinkActive="active"
+                >
+                    <mat-icon matListItemIcon> label </mat-icon>
+                    <span>{{ label }}</span>
+                </button>
 
                 <hr />
-                <mat-list-item routerLink="/other" routerLinkActive="active">
-                    <mat-icon>archive</mat-icon>
+                <button
+                    mat-button
+                    routerLink="/other"
+                    routerLinkActive="active"
+                >
+                    <mat-icon matListItemIcon>archive</mat-icon>
                     <span>Other Contacts</span>
-                </mat-list-item>
-                <mat-list-item routerLink="/trash" routerLinkActive="active">
-                    <mat-icon> delete </mat-icon>
+                </button>
+                <button
+                    mat-button
+                    routerLink="/trash"
+                    routerLinkActive="active"
+                >
+                    <mat-icon matListItemIcon> delete </mat-icon>
                     <span>Trash</span>
-                </mat-list-item>
-            </mat-nav-list>
+                </button>
+            </div>
         </mat-drawer>
         <mat-drawer-content>
             <router-outlet></router-outlet>

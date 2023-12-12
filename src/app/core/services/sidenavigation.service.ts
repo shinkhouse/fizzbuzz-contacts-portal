@@ -10,7 +10,6 @@ export class SidenavigationService {
     private sidenav: MatDrawer;
 
     public setSidenav(sidenav: MatDrawer) {
-        console.log(sidenav);
         this.sidenav = sidenav;
     }
 

@@ -8,8 +8,8 @@ describe('EmptyListingComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ EmptyListingComponent ]
-    })
+    imports: [EmptyListingComponent]
+})
     .compileComponents();
   });
 

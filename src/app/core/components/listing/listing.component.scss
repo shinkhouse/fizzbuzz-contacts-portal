@@ -1,6 +1,10 @@
 .contact {
     padding: 16px 0px;
     height: 64px;
+    transition: height 225ms cubic-bezier(0.4, 0, 0.2, 1);
+    &.cozy {
+        height: 56px;
+    }
 
     > div:first-child {
         padding-left: 24px;
@@ -11,7 +15,7 @@
     }
 
     .actions {
-        min-width: 160px;
+        min-width: 180px;
     }
 }
 
@@ -58,7 +62,6 @@
     .profile-icon {
         width: 36px;
         height: 36px;
-        background: var(--color-primary);
         border-radius: 36px;
         text-align: center;
 

@@ -4,11 +4,14 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { ContactDetailsComponent } from 'src/app/core/components/contact-details/contact-details.component';
 import { Contact } from 'src/app/core/models/contact.model';
 import { ContactsService } from 'src/app/core/services/contacts.service';
+import { ListingComponent } from '../../core/components/listing/listing.component';
 
 @Component({
     selector: 'app-contacts',
     templateUrl: './contacts.component.html',
     styleUrls: ['./contacts.component.scss'],
+    standalone: true,
+    imports: [ListingComponent],
 })
 export class ContactsComponent implements OnInit {
     public contactList: Contact[];

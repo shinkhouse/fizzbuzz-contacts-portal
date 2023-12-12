@@ -1,9 +1,19 @@
+@use "@angular/material" as mat;
+@include mat.core();
 mat-toolbar {
     background: var(--background-color-card) !important;
     border-bottom: 1px solid -var(--border-color);
 
     &.footer {
         border-top: 1px solid -var(--border-color);
+    }
+}
+
+.edit-contact-details {
+    form {
+        mat-icon {
+            margin-top: 12px;
+        }
     }
 }
 
@@ -18,10 +28,11 @@ mat-icon {
     color: var(--text-color-secondary);
 }
 
+/* TODO(mdc-migration): The following rule targets internal classes of chips that may no longer apply for the MDC version.*/
 mat-chip,
 mat-chip:hover,
 mat-chip:focus,
-.mat-chip {
+.mat-mdc-chip {
     background: var(--background-color) !important;
     border: 1px solid var(--border-color);
 
@@ -35,6 +46,7 @@ form,
     padding: 24px;
     overflow: auto;
     max-width: 720px;
+    color: var(--text-color-primary);
 }
 
 .detail-section {

@@ -1,13 +1,36 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Contact } from '../../models/contact.model';
 import { ContactsService } from '../../services/contacts.service';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatChipsModule } from '@angular/material/chips';
+import { FlexModule } from '@angular/flex-layout/flex';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { NgIf, NgFor, DatePipe } from '@angular/common';
 
 @Component({
     selector: 'app-contact-details',
     templateUrl: './contact-details.component.html',
     styleUrls: ['./contact-details.component.scss'],
+    standalone: true,
+    imports: [
+        NgIf,
+        MatToolbarModule,
+        FlexModule,
+        MatChipsModule,
+        MatButtonModule,
+        MatIconModule,
+        NgFor,
+        FormsModule,
+        ReactiveFormsModule,
+        MatFormFieldModule,
+        MatInputModule,
+        DatePipe,
+    ],
 })
 export class ContactDetailsComponent implements OnInit {
     public editMode: boolean;
@@ -99,7 +122,7 @@ export class ContactDetailsComponent implements OnInit {
             }
         })
         this.contact = this.contactForm.value;
-        this.contacts.updateContactInfo(this.contact.id, this.contact);
+        // this.contacts.updateContactInfo(this.contact.id, this.contact);
         this.toggleEditMode();
     }
 

@@ -8,8 +8,8 @@ describe('TrashComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TrashComponent ]
-    })
+    imports: [TrashComponent]
+})
     .compileComponents();
   });
 

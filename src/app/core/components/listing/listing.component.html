@@ -12,12 +12,27 @@
         <span>Phone</span>
     </div>
     <div class="actions">
-        <span>Actions</span>
+        <div class="action-buttons">
+            <button mat-icon-button>
+                <mat-icon>print</mat-icon>
+            </button>
+            <button mat-icon-button><mat-icon>file_upload</mat-icon></button>
+            <button mat-icon-button [matMenuTriggerFor]="moreMenu">
+                <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #moreMenu="matMenu">
+                <button mat-menu-item (click)="openDensityDialog()">
+                    <span>Density</span>
+                </button>
+            </mat-menu>
+        </div>
     </div>
 </div>
 <div class="contacts-container" fxLayout="column">
     <div
         class="contact contact-row"
+        [class.comfortable]="density === 'comfortable'"
+        [class.cozy]="density === 'cozy'"
         fxLayout="row"
         fxLayoutAlign="start center"
         *ngFor="let contact of contactList; let index = index"
@@ -30,19 +45,19 @@
             fxLayoutAlign="start center"
             fxLayoutGap="16px"
         >
-            <div class="profile-icon">
+            <div class="profile-icon" [style.background]="contact.color">
                 <span> {{ contact.firstName.substr(0, 1) }}</span>
             </div>
             <span>{{ contact.firstName }} {{ contact.lastName }}</span>
         </div>
         <div class="email" fxFlex>
-            <span>{{ contact.email }}</span>
+            <span>{{ contact.jobTitle }}</span>
         </div>
         <div class="phone" fxFlex>
-            <span>{{ contact.phone }}</span>
+            <span>{{ contact.email }}</span>
         </div>
         <div class="job-title" fxFlex>
-            <span>{{ contact.jobTitle }}</span>
+            <span>{{ contact.phone }}</span>
         </div>
         <div class="actions">
             <div class="action-buttons">
@@ -60,7 +75,8 @@
                 <button
                     mat-icon-button
                     (click)="
-                        openContactDetails(contact, true); $event.stopPropagation()
+                        openContactDetails(contact, true);
+                        $event.stopPropagation()
                     "
                 >
                     <mat-icon>edit</mat-icon>

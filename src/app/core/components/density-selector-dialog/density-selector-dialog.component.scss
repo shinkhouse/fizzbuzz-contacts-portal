@@ -1,0 +1,17 @@
+.mat-button-toggle-checked[color="primary"] {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.image-container {
+    padding: 16px 16px 0px;
+    background-color: var(--background-color-table-stripe);
+    width: 100%;
+    height: 250px;
+    border-bottom: 1px solid var(--border-color);
+    img {
+        width: inherit;
+        height: 100%;
+    }
+    margin-bottom: 16px;
+}

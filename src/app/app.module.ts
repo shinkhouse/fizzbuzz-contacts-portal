@@ -1,20 +1,21 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule } from './app.routing';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HeaderModule } from './core/components/header/header.module';
+
 import { HttpClientModule } from '@angular/common/http';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatListModule} from '@angular/material/list';
 import {MatButtonModule} from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import { ContactDetailsModule } from './core/components/contact-details/contact-details.module';
+
 import {MatExpansionModule} from '@angular/material/expansion';
 import { SidenavigationService } from './core/services/sidenavigation.service';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -25,17 +26,15 @@ import { MatDialogModule } from '@angular/material/dialog';
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    HeaderModule,
     MatSidenavModule,
     FlexLayoutModule,
     MatListModule,
     MatButtonModule,
     MatIconModule,
-    ContactDetailsModule,
     MatExpansionModule,
     MatDialogModule
-  ],
-  providers: [SidenavigationService],
+],
+  providers: [SidenavigationService, { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'outline' }}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

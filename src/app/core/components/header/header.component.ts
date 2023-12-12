@@ -1,16 +1,42 @@
 import { Component, ElementRef, Inject, OnInit, ViewChild } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { Contact } from '../../models/contact.model';
 import { ContactsService } from '../../services/contacts.service';
 import { SidenavigationService } from '../../services/sidenavigation.service';
 import { filter, map, startWith } from 'rxjs/operators';
-import { DOCUMENT } from '@angular/common';
+import { DOCUMENT, NgFor, NgIf, AsyncPipe } from '@angular/common';
+import { ContactDetailsComponent } from '../contact-details/contact-details.component';
+import { MatDialog } from '@angular/material/dialog';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatOptionModule } from '@angular/material/core';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatInputModule } from '@angular/material/input';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { FlexModule } from '@angular/flex-layout/flex';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @Component({
     selector: 'app-header',
     templateUrl: './header.component.html',
     styleUrls: ['./header.component.scss'],
+    standalone: true,
+    imports: [
+        MatToolbarModule,
+        FlexModule,
+        MatButtonModule,
+        MatIconModule,
+        FormsModule,
+        MatInputModule,
+        MatAutocompleteModule,
+        ReactiveFormsModule,
+        NgFor,
+        MatOptionModule,
+        NgIf,
+        MatMenuModule,
+        AsyncPipe,
+    ],
 })
 export class HeaderComponent implements OnInit {
     public searchTextInput: string;
@@ -21,6 +47,7 @@ export class HeaderComponent implements OnInit {
     constructor(
         private sidenav: SidenavigationService,
         private contacts: ContactsService,
+        private dialog: MatDialog,
         @Inject(DOCUMENT) private document: Document
     ) {}
 
@@ -44,7 +71,6 @@ export class HeaderComponent implements OnInit {
 
     private _filter(name: string): Contact[] {
         const filterValue = name.toLowerCase();
-        console.log('filter', filterValue);
 
         if (filterValue.length > 0) {
             return this.contactList.filter((option) => {
@@ -76,5 +102,13 @@ export class HeaderComponent implements OnInit {
             this.document.body.classList.add('dark');
             localStorage.setItem('dark', 'true');
         }
+    }
+
+    openContactDetails(contactDetails: Contact) {
+        this.dialog.open(ContactDetailsComponent, {
+            minWidth: '700px',
+            panelClass: 'contact-modal',
+            data: {contact: contactDetails}
+        })
     }
 }
