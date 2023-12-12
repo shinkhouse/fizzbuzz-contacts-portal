@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MatLegacyDialog as MatDialog } from '@angular/material/legacy-dialog';
+import { MatDialog } from '@angular/material/dialog';
 import { ContactDetailsComponent } from 'src/app/core/components/contact-details/contact-details.component';
 import { Contact } from 'src/app/core/models/contact.model';
 import { ContactsService } from 'src/app/core/services/contacts.service';

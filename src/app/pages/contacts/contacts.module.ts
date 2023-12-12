@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { ContactsRoutingModule } from './contacts-routing.module';
 import { ContactsComponent } from './contacts.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { MatLegacyDialogModule as MatDialogModule } from '@angular/material/legacy-dialog';
+import { MatDialogModule } from '@angular/material/dialog';
 import { ContactDetailsModule } from 'src/app/core/components/contact-details/contact-details.module';
 
 @NgModule({
