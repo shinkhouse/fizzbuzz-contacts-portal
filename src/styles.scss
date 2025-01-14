@@ -26,18 +26,8 @@ $contacts-clone-accent: mat.define-palette(mat.$blue-palette, 500, 300, 400);
 // The warn palette is optional (defaults to red).
 $contacts-clone-warn: mat.define-palette(mat.$red-palette);
 
-$contacts-clone-primary-dark: mat.define-palette(
-    mat.$blue-palette,
-    400,
-    800,
-    900
-);
-$contacts-clone-accent-dark: mat.define-palette(
-    mat.$blue-palette,
-    500,
-    300,
-    400
-);
+$contacts-clone-primary-dark: mat.define-palette(mat.$blue-palette, 400, 800, 900);
+$contacts-clone-accent-dark: mat.define-palette(mat.$blue-palette, 500, 300, 400);
 
 // The warn palette is optional (defaults to red).
 $contacts-clone-warn-dark: mat.define-palette(mat.$red-palette);
@@ -96,29 +86,14 @@ body {
     font-family: Roboto, "Helvetica Neue", sans-serif;
     background: var(--background-color);
 
-    --color-primary: #{mat.get-color-from-palette(
-            map-get($contacts-clone-theme, primary)
-        )};
-    --color-accent: #{mat.get-color-from-palette(
-            map-get($contacts-clone-theme, accent)
-        )};
-    --hover-color-primary: #{transparentize(
-            mat.get-color-from-palette(map-get($contacts-clone-theme, primary)),
-            0.88
-        )};
-    --hover-color-accent: #{transparentize(
-            mat.get-color-from-palette(map-get($contacts-clone-theme, accent)),
-            0.88
-        )};
+    --color-primary: #{mat.get-color-from-palette(map-get($contacts-clone-theme, primary))};
+    --color-accent: #{mat.get-color-from-palette(map-get($contacts-clone-theme, accent))};
+    --hover-color-primary: #{transparentize(mat.get-color-from-palette(map-get($contacts-clone-theme, primary)), 0.88)};
+    --color-primary-background: #{mat.get-color-from-palette(map-get($contacts-clone-theme, primary), 50)};
+    --hover-color-accent: #{transparentize(mat.get-color-from-palette(map-get($contacts-clone-theme, accent)), 0.88)};
     --hover-color: #{rgba(black, 0.06)};
-    --border-color: #{mat.get-color-from-palette(
-            map-get($contacts-clone-theme, foreground),
-            divider
-        )};
-    --background-color-card: #{mat.get-color-from-palette(
-            map-get($contacts-clone-theme, background),
-            card
-        )};
+    --border-color: #{mat.get-color-from-palette(map-get($contacts-clone-theme, foreground), divider)};
+    --background-color-card: #{mat.get-color-from-palette(map-get($contacts-clone-theme, background), card)};
     // --background-color: #{mat.get-color-from-palette(map-get($contacts-clone-theme, background), background)};
     --background-color: white;
     --background-color-table-stripe: #{map_get(mat.$grey-palette, 200)};
@@ -130,37 +105,14 @@ body {
 
 body.dark {
     @include mat.all-component-themes($contacts-clone-theme-dark);
-    --color-primary: #{mat.get-color-from-palette(
-            map-get($contacts-clone-theme-dark, primary)
-        )};
-    --color-accent: #{mat.get-color-from-palette(
-            map-get($contacts-clone-theme-dark, accent)
-        )};
-    --hover-color-primary: #{transparentize(
-            mat.get-color-from-palette(
-                map-get($contacts-clone-theme-dark, primary)
-            ),
-            0.88
-        )};
-    --hover-color-accent: #{transparentize(
-            mat.get-color-from-palette(
-                map-get($contacts-clone-theme-dark, accent)
-            ),
-            0.88
-        )};
+    --color-primary: #{mat.get-color-from-palette(map-get($contacts-clone-theme-dark, primary))};
+    --color-accent: #{mat.get-color-from-palette(map-get($contacts-clone-theme-dark, accent))};
+    --hover-color-primary: #{transparentize(mat.get-color-from-palette(map-get($contacts-clone-theme-dark, primary)), 0.88)};
+    --hover-color-accent: #{transparentize(mat.get-color-from-palette(map-get($contacts-clone-theme-dark, accent)), 0.88)};
     --hover-color: #{rgba(white, 0.06)};
-    --border-color: #{mat.get-color-from-palette(
-            map-get($contacts-clone-theme-dark, foreground),
-            divider
-        )};
-    --background-color-card: #{mat.get-color-from-palette(
-            map-get($contacts-clone-theme-dark, background),
-            card
-        )};
-    --background-color: #{mat.get-color-from-palette(
-            map-get($contacts-clone-theme-dark, background),
-            background
-        )};
+    --border-color: #{mat.get-color-from-palette(map-get($contacts-clone-theme-dark, foreground), divider)};
+    --background-color-card: #{mat.get-color-from-palette(map-get($contacts-clone-theme-dark, background), card)};
+    --background-color: #{mat.get-color-from-palette(map-get($contacts-clone-theme-dark, background), background)};
     --background-color-table-stripe: #{map_get(mat.$grey-palette, 200)};
     --text-color-primary: #{rgba(white, 0.87)};
     --text-color-secondary: #{rgba(white, 0.54)};

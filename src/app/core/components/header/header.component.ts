@@ -16,6 +16,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { FlexModule } from '@angular/flex-layout/flex';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { OverlayModule } from '@angular/cdk/overlay';
 
 @Component({
     selector: 'app-header',
@@ -36,6 +37,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
         NgIf,
         MatMenuModule,
         AsyncPipe,
+        OverlayModule
     ],
 })
 export class HeaderComponent implements OnInit {
@@ -43,6 +45,7 @@ export class HeaderComponent implements OnInit {
     public contactList: Contact[];
     filteredOptions: Observable<Contact[]>;
     myControl = new FormControl();
+    isOpen: boolean = false;
 
     constructor(
         private sidenav: SidenavigationService,
