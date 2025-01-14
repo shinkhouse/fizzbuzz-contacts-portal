@@ -11,11 +11,14 @@ export class ContactsService {
 
     getContacts(): Contact[] {
         return this.contacts.sort((a, b) => {
+            if (a.favorite === b.favorite) {
             if (a.firstName > b.firstName) {
                 return 1;
             } else {
                 return -1;
             }
+            }
+            return a.favorite ? -1 : 1;
         });
     }
 

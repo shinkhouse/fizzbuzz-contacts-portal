@@ -7,16 +7,17 @@ import { ContactDetailsComponent } from '../contact-details/contact-details.comp
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { NgForOf } from '@angular/common';
+import { JsonPipe, NgForOf, NgIf, NgTemplateOutlet } from '@angular/common';
 import { MatMenuModule } from '@angular/material/menu';
 import { DensitySelectorDialogComponent } from '../density-selector-dialog/density-selector-dialog.component';
+import { MatChipsModule } from '@angular/material/chips';
 
 @Component({
     selector: 'app-listing',
     templateUrl: './listing.component.html',
     styleUrls: ['./listing.component.scss'],
     standalone: true,
-    imports: [MatMenuModule, MatDialogModule, MatSnackBarModule, MatIconModule, MatButtonModule, FlexLayoutModule, NgForOf],
+    imports: [MatMenuModule, MatDialogModule, MatSnackBarModule, MatIconModule, MatButtonModule, FlexLayoutModule, NgForOf, NgIf, MatChipsModule, JsonPipe, NgTemplateOutlet],
 })
 export class ListingComponent implements OnInit {
     @Input() contactList: Contact[];
