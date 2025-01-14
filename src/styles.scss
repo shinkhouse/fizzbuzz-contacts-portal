@@ -187,9 +187,13 @@ button.mat-mdc-menu-item {
 }
 
 a {
-    color: var(--color-primary);
+    color: var(--text-color-primary);
     outline: none;
     text-decoration: none;
+    &:hover {
+        transition: 0.2s;
+        color: var(--color-primary);
+    }
 }
 
 mat-expansion-panel.mat-expansion-panel {
