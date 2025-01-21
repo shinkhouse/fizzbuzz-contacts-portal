@@ -70,13 +70,13 @@
             </div>
             <span>{{ contact.firstName }} {{ contact.lastName }}</span>
         </div>
-        <div class="email" fxFlex>
+        <div class="job-title" fxFlex>
             <span>{{ contact.jobTitle }}</span>
         </div>
-        <div class="phone" fxFlex>
+        <div class="email" fxFlex>
             <a href="mailto:{{ contact.email }}" (click)="$event.stopPropagation()">{{ contact.email }}</a>
         </div>
-        <div class="job-title" fxFlex>
+        <div class="phone" fxFlex>
             <a href="tel:{{ contact.phone }}" (click)="$event.stopPropagation()">{{ contact.phone }}</a>
         </div>
         <div class="labels" fxFlex>
