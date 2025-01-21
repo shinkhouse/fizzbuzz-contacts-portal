@@ -24,6 +24,7 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { HeaderComponent } from './core/components/header/header.component';
 import { SendFeedbackComponent } from './core/components/send-feedback/send-feedback.component';
+import { AddTagDialogComponent } from './core/components/add-tag-dialog/add-tag-dialog.component';
 
 @Component({
     selector: 'app-root',
@@ -102,5 +103,11 @@ export class AppComponent implements OnInit, AfterViewInit {
     toggleSendFeedbackDrawer() {
         console.log('hello');
         this.isSendFeedbackOpen = !this.isSendFeedbackOpen;
+    }
+
+    addLabel() {
+        this.dialog.open(AddTagDialogComponent, {
+            minWidth: '360px'
+        });
     }
 }

@@ -1,1 +1,13 @@
-<p>add-tag-dialog works!</p>
+<h2 mat-dialog-title>Add New Tag</h2>
+<mat-dialog-content>
+    <form>
+        <mat-form-field appearance="outline" class="flex">
+            <mat-label>Tag Name</mat-label>
+            <input matInput [(ngModel)]="tagName" name="tagName" required>
+        </mat-form-field>
+    </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button mat-raised-button color="primary" [mat-dialog-close]="tagName" [disabled]="!tagName">Add Tag</button>
+</mat-dialog-actions>
