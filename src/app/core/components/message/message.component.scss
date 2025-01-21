@@ -30,3 +30,12 @@ div.message {
         }
     }
 }
+
+@media only screen and (max-width: 600px) {
+    div.message {
+        width: 100%;
+        .message-content p {
+            font-size: 14px;
+        }
+    }
+}

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Contacts } from '../mock/contacts.mock';
 import { Contact, Label } from '../models/contact.model';
+import { Labels } from '../mock/label.mock';
 
 @Injectable({
     providedIn: 'root',
@@ -12,26 +13,28 @@ export class ContactsService {
     getContacts(): Contact[] {
         return this.contacts.sort((a, b) => {
             if (a.favorite === b.favorite) {
-            if (a.firstName > b.firstName) {
-                return 1;
-            } else {
-                return -1;
-            }
+                if (a.firstName > b.firstName) {
+                    return 1;
+                } else {
+                    return -1;
+                }
             }
             return a.favorite ? -1 : 1;
         });
     }
 
     getFavoriteContacts(): Contact[] {
-        return this.contacts.filter((contact: Contact, index: number) => {
-            return contact.favorite === true;
-        }).sort((a, b) => {
-            if (a.firstName > b.firstName) {
-                return 1;
-            } else {
-                return -1;
-            }
-        });
+        return this.contacts
+            .filter((contact: Contact, index: number) => {
+                return contact.favorite === true;
+            })
+            .sort((a, b) => {
+                if (a.firstName > b.firstName) {
+                    return 1;
+                } else {
+                    return -1;
+                }
+            });
     }
 
     getFrequentContacts(): Contact[] {
@@ -45,15 +48,17 @@ export class ContactsService {
     }
 
     getContactsInTrash(): Contact[] {
-        return this.contacts.filter((contact: Contact, index: number) => {
-            return contact.inTrash === true;
-        }).sort((a, b) => {
-            if (a.firstName > b.firstName) {
-                return 1;
-            } else {
-                return -1;
-            }
-        });
+        return this.contacts
+            .filter((contact: Contact, index: number) => {
+                return contact.inTrash === true;
+            })
+            .sort((a, b) => {
+                if (a.firstName > b.firstName) {
+                    return 1;
+                } else {
+                    return -1;
+                }
+            });
     }
 
     getContactById(contactId: number): Contact | undefined {
@@ -67,27 +72,20 @@ export class ContactsService {
     }
 
     getContactsByTag(label: string) {
-        return this.contacts.filter((contact: Contact, index: number) => {
-            return contact.labels?.some((l) => l.label === label);
-        }).sort((a, b) => {
-            if (a.firstName > b.firstName) {
-                return 1;
-            } else {
-                return -1;
-            }
-        });
+        return this.contacts
+            .filter((contact: Contact, index: number) => {
+                return contact.labels?.some((l) => l.label === label);
+            })
+            .sort((a, b) => {
+                if (a.firstName > b.firstName) {
+                    return 1;
+                } else {
+                    return -1;
+                }
+            });
     }
 
     getContactTags() {
-        let tags: Label[] = [];
-        tags = this.contacts
-            .map((contact) => contact.labels)
-            .filter((labels) => labels != null)
-            .flat();
-        console.log(Array.from(new Set(tags.map((tag) => {return tag.label}))));
-
-    return Array.from(
-        new Map(tags.map(item => [item.label, item])).values()
-    );
+        return Labels;
     }
 }
