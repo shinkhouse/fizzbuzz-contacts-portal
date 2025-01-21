@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ListingComponent } from 'src/app/core/components/listing/listing.component';
+import { MessageComponent } from 'src/app/core/components/message/message.component';
 import { Contact } from 'src/app/core/models/contact.model';
 import { ContactsService } from 'src/app/core/services/contacts.service';
 
@@ -8,7 +9,7 @@ import { ContactsService } from 'src/app/core/services/contacts.service';
     templateUrl: './trash.component.html',
     styleUrls: ['./trash.component.scss'],
     standalone: true,
-    imports: [ListingComponent]
+    imports: [ListingComponent, MessageComponent]
 })
 export class TrashComponent implements OnInit {
     public contactList: Contact[];
@@ -20,5 +21,9 @@ export class TrashComponent implements OnInit {
 
     getContacts() {
         this.contactList = this.contacts.getContactsInTrash();
+    }
+
+    emptyTrash() {
+        this.contactList = [];
     }
 }

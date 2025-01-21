@@ -11,6 +11,7 @@ import { JsonPipe, NgForOf, NgIf, NgTemplateOutlet } from '@angular/common';
 import { MatMenuModule } from '@angular/material/menu';
 import { DensitySelectorDialogComponent } from '../density-selector-dialog/density-selector-dialog.component';
 import { MatChipsModule } from '@angular/material/chips';
+import { ModifyColumnsComponent } from '../modify-columns/modify-columns.component';
 
 @Component({
     selector: 'app-listing',
@@ -59,5 +60,11 @@ export class ListingComponent implements OnInit {
                     this.density = density;
                 }
             });
+    }
+
+    openColumnModificationDialog() {
+        this.dialog.open(ModifyColumnsComponent, {}).afterClosed().subscribe((columnOrder) => {
+
+        })
     }
 }

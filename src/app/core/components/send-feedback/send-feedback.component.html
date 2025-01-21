@@ -1,0 +1,28 @@
+<div class="feedback-container">
+    <mat-toolbar>
+        <span>Send Feedback</span>
+        <button mat-icon-button (click)="closeSendFeedback()">
+            <mat-icon>close</mat-icon>
+        </button>
+    </mat-toolbar>
+    <main>
+        <mat-form-field appearance="outline" floatLabel="always">
+            <mat-label>Describe your feedback</mat-label>
+            <textarea matInput placeholder="Tell us what prompted your feedback..." type="text"></textarea>
+            <mat-hint align="start" class="mat-hint mat-caption">Please don't include any sensitive information.</mat-hint>
+        </mat-form-field>
+        <p class="screenshot-description">A screenshot will help us better understand your idea. (optional)</p>
+        <button class="screenshot-btn" color="primary" mat-stroked-button (click)="startCapture()">
+            <mat-icon>computer</mat-icon>
+            <span>Capture Screenshot</span>
+        </button>
+        <div class="image-container" [ngClass]="{ show: base64Img.length > 0 }">
+            <h5>Attached Image</h5>
+            <video #screenVideo autoplay playsinline></video>
+            <img #screenshot alt="Screenshot" id="screenshot" />
+        </div>
+    </main>
+    <footer>
+        <button color="primary" mat-flat-button (click)="sendFeedback()">Submit Feedback</button>
+    </footer>
+</div>

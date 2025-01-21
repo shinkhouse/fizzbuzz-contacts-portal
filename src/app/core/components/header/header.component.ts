@@ -1,4 +1,4 @@
-import { Component, ElementRef, Inject, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Inject, OnInit, Output, ViewChild } from '@angular/core';
 import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { Contact } from '../../models/contact.model';
@@ -41,6 +41,7 @@ import { OverlayModule } from '@angular/cdk/overlay';
     ],
 })
 export class HeaderComponent implements OnInit {
+    @Output() sendFeedbackToggled: EventEmitter<boolean> = new EventEmitter();
     public searchTextInput: string;
     public contactList: Contact[];
     filteredOptions: Observable<Contact[]>;
@@ -113,5 +114,9 @@ export class HeaderComponent implements OnInit {
             panelClass: 'contact-modal',
             data: {contact: contactDetails}
         })
+    }
+
+    toggleSendFeedback() {
+        this.sendFeedbackToggled.emit(false);
     }
 }

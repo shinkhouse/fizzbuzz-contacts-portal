@@ -5,7 +5,7 @@ app-header {
 mat-drawer-container {
     width: 100%;
     background-color: var(--background-color);
-    mat-drawer {
+    mat-drawer:not(.right-side-drawer) {
         border: 0px;
         width: 300px;
         // padding-right: 16px;
@@ -85,4 +85,8 @@ hr {
             }
         }
     }
+}
+
+.right-side-drawer {
+    width: 400px;
 }

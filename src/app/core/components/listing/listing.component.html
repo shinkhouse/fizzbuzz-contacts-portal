@@ -25,7 +25,12 @@
             </button>
             <mat-menu #moreMenu="matMenu">
                 <button mat-menu-item (click)="openDensityDialog()">
-                    <span>Density</span>
+                    <mat-icon>list</mat-icon>
+                    <span>Display Density</span>
+                </button>
+                <button mat-menu-item (click)="openColumnModificationDialog()">
+                    <mat-icon>view_column_outline</mat-icon>
+                    <span>Modify columns</span>
                 </button>
             </mat-menu>
         </div>
@@ -58,7 +63,10 @@
     >
         <div class="full-name" fxFlex fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="16px">
             <div class="profile-icon" [style.background]="contact.color">
-                <span> {{ contact.firstName.substr(0, 1) }}</span>
+                <img [src]="contact.photoUrl" *ngIf="contact.photoUrl; else placeholder" alt="{{contact.firstName}} photo">
+                <ng-template #placeholder>
+                    <span> {{ contact.firstName.substr(0, 1) }}</span>
+                </ng-template>
             </div>
             <span>{{ contact.firstName }} {{ contact.lastName }}</span>
         </div>
@@ -73,7 +81,9 @@
         </div>
         <div class="labels" fxFlex>
             <mat-chip-set>
-                <mat-chip *ngIf="contact.label">{{ contact.label }}</mat-chip>
+                <ng-container *ngIf="contact.labels">
+                    <mat-chip *ngFor="let label of contact.labels">{{ label.label }}</mat-chip>
+                </ng-container>
             </mat-chip-set>
         </div>
         <div class="actions">

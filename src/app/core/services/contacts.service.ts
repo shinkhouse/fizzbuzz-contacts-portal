@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Contacts } from '../mock/contacts.mock';
-import { Contact } from '../models/contact.model';
+import { Contact, Label } from '../models/contact.model';
 
 @Injectable({
     providedIn: 'root',
@@ -68,7 +68,7 @@ export class ContactsService {
 
     getContactsByTag(label: string) {
         return this.contacts.filter((contact: Contact, index: number) => {
-            return contact.label === label;
+            return contact.labels?.some((l) => l.label === label);
         }).sort((a, b) => {
             if (a.firstName > b.firstName) {
                 return 1;
@@ -79,21 +79,15 @@ export class ContactsService {
     }
 
     getContactTags() {
-        let tags: any[] = [];
-        tags = this.contacts.map((contact) => {
-            return contact.label;
-        }).filter((label) => {
-            return label != null;
-        });
+        let tags: Label[] = [];
+        tags = this.contacts
+            .map((contact) => contact.labels)
+            .filter((labels) => labels != null)
+            .flat();
+        console.log(Array.from(new Set(tags.map((tag) => {return tag.label}))));
 
-        return tags.reduce((a, b) => {
-            if (a.indexOf(b) < 0) {
-                if (typeof b === 'string') {
-                    a.push(b);
-                }
-            }
-            return a;
-        }, []);
-        return tags;
+    return Array.from(
+        new Map(tags.map(item => [item.label, item])).values()
+    );
     }
 }

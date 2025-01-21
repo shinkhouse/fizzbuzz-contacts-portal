@@ -1,9 +1,10 @@
 <main>
-    <app-header></app-header>
+    <app-header (sendFeedbackToggled)="toggleSendFeedbackDrawer()"></app-header>
     <mat-drawer-container>
         <mat-drawer
             #drawer
             class="example-sidenav"
+            position="start"
             [mode]="drawerMode"
             [opened]="isDrawerOpen"
         >
@@ -54,12 +55,12 @@
                 </div>
                 <button
                     mat-button
-                    routerLink="/tag/{{ label }}"
+                    routerLink="/tag/{{ label.label }}"
                     *ngFor="let label of contactTags"
                     routerLinkActive="active"
                 >
                     <mat-icon matListItemIcon> label </mat-icon>
-                    <span>{{ label }}</span>
+                    <span>{{ label.label }}</span>
                 </button>
 
                 <hr />
@@ -85,5 +86,8 @@
         <mat-drawer-content>
             <router-outlet></router-outlet>
         </mat-drawer-content>
+        <mat-drawer class="right-side-drawer" [opened]="isSendFeedbackOpen" mode="side" position="end">
+            <app-send-feedback (closed)="toggleSendFeedbackDrawer()"></app-send-feedback>
+        </mat-drawer>
     </mat-drawer-container>
 </main>

@@ -1,4 +1,5 @@
 import { Contact } from '../models/contact.model';
+import { faker } from '@faker-js/faker';
 
 export const Contacts: Contact[] = [
     {
@@ -23,8 +24,9 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('5/8/2021'),
         inTrash: true,
-        label: null,
+        labels: [],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 2,
@@ -40,8 +42,9 @@ export const Contacts: Contact[] = [
         favorite: true,
         lastContacted: new Date('11/6/2020'),
         inTrash: false,
-        label: null,
+        labels: [],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 3,
@@ -86,8 +89,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('7/2/2018'),
         inTrash: true,
-        label: 'Friends',
+        labels: [
+            {
+                label: 'Friends',
+                labelId: 1
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 4,
@@ -118,8 +127,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('8/14/2015'),
         inTrash: true,
-        label: 'Friends',
+        labels: [
+            {
+                label: 'Friends',
+                labelId: 1
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 5,
@@ -143,8 +158,9 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('5/16/2021'),
         inTrash: false,
-        label: null,
+        labels: [],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 6,
@@ -196,8 +212,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('2/25/2016'),
         inTrash: false,
-        label: 'Family',
+        labels: [
+            {
+                label: 'Family',
+                labelId: 3
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 7,
@@ -242,8 +264,14 @@ export const Contacts: Contact[] = [
         favorite: true,
         lastContacted: new Date('9/23/2018'),
         inTrash: false,
-        label: 'Work',
+        labels: [
+            {
+                label: 'Work',
+                labelId: 2
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 8,
@@ -267,8 +295,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('4/15/2016'),
         inTrash: true,
-        label: 'Friends',
+        labels: [
+            {
+                label: 'Friends',
+                labelId: 1
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 9,
@@ -299,8 +333,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('7/11/2016'),
         inTrash: true,
-        label: 'Friends',
+        labels: [
+            {
+                label: 'Friends',
+                labelId: 1
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 10,
@@ -338,8 +378,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('3/15/2016'),
         inTrash: false,
-        label: 'Family',
+        labels: [
+            {
+                label: 'Family',
+                labelId: 3
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 11,
@@ -355,8 +401,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('12/22/2016'),
         inTrash: false,
-        label: 'Work',
+        labels: [
+            {
+                label: 'Work',
+                labelId: 2
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 12,
@@ -401,8 +453,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('7/4/2014'),
         inTrash: false,
-        label: 'Work',
+        labels: [
+            {
+                label: 'Work',
+                labelId: 2
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 13,
@@ -433,8 +491,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('6/21/2014'),
         inTrash: true,
-        label: 'Friends',
+        labels: [
+            {
+                label: 'Friends',
+                labelId: 1
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 14,
@@ -450,8 +514,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('10/26/2016'),
         inTrash: false,
-        label: 'Friends',
+        labels: [
+            {
+                label: 'Friends',
+                labelId: 1
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 15,
@@ -475,8 +545,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('7/10/2016'),
         inTrash: true,
-        label: 'Work',
+        labels: [
+            {
+                label: 'Work',
+                labelId: 2
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 16,
@@ -507,8 +583,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('9/30/2016'),
         inTrash: true,
-        label: 'Friends',
+        labels: [
+            {
+                label: 'Friends',
+                labelId: 1
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 17,
@@ -560,8 +642,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('9/7/2015'),
         inTrash: true,
-        label: 'Friends',
+        labels: [
+            {
+                label: 'Friends',
+                labelId: 1
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 18,
@@ -585,8 +673,9 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('9/7/2020'),
         inTrash: false,
-        label: null,
+        labels: [],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 19,
@@ -638,8 +727,14 @@ export const Contacts: Contact[] = [
         favorite: true,
         lastContacted: new Date('6/8/2017'),
         inTrash: true,
-        label: 'Work',
+        labels: [
+            {
+                label: 'Work',
+                labelId: 2
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 20,
@@ -677,8 +772,9 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('8/27/2015'),
         inTrash: true,
-        label: null,
+        labels: [],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 21,
@@ -716,8 +812,9 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('6/19/2017'),
         inTrash: false,
-        label: null,
+        labels: [],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 22,
@@ -741,8 +838,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('5/4/2020'),
         inTrash: false,
-        label: 'Work',
+        labels: [
+            {
+                label: 'Work',
+                labelId: 2
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 23,
@@ -758,8 +861,9 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('1/11/2018'),
         inTrash: true,
-        label: null,
+        labels: [],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 24,
@@ -797,8 +901,9 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('6/1/2020'),
         inTrash: false,
-        label: null,
+        labels: [],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 25,
@@ -836,8 +941,9 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('3/10/2019'),
         inTrash: false,
-        label: null,
+        labels: [],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 26,
@@ -868,8 +974,9 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('12/8/2019'),
         inTrash: true,
-        label: null,
+        labels: [],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 27,
@@ -900,8 +1007,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('6/27/2020'),
         inTrash: false,
-        label: 'Friends',
+        labels: [
+            {
+                label: 'Friends',
+                labelId: 1
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 28,
@@ -946,8 +1059,9 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('9/27/2016'),
         inTrash: false,
-        label: null,
+        labels: [],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 29,
@@ -978,8 +1092,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('2/1/2018'),
         inTrash: false,
-        label: 'Family',
+        labels: [
+            {
+                label: 'Family',
+                labelId: 3
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 30,
@@ -995,8 +1115,9 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('8/26/2017'),
         inTrash: false,
-        label: null,
+        labels: [],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 31,
@@ -1048,8 +1169,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('4/23/2018'),
         inTrash: false,
-        label: 'Family',
+        labels: [
+            {
+                label: 'Family',
+                labelId: 3
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 32,
@@ -1073,8 +1200,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('8/15/2014'),
         inTrash: true,
-        label: 'Friends',
+        labels: [
+            {
+                label: 'Friends',
+                labelId: 1
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 33,
@@ -1112,8 +1245,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('5/13/2015'),
         inTrash: true,
-        label: 'Friends',
+        labels: [
+            {
+                label: 'Friends',
+                labelId: 1
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 34,
@@ -1137,8 +1276,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('6/22/2018'),
         inTrash: true,
-        label: 'Friends',
+        labels: [
+            {
+                label: 'Friends',
+                labelId: 1
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 35,
@@ -1176,8 +1321,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('7/9/2014'),
         inTrash: true,
-        label: 'Friends',
+        labels: [
+            {
+                label: 'Friends',
+                labelId: 1
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 36,
@@ -1229,8 +1380,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('1/15/2020'),
         inTrash: false,
-        label: 'Work',
+        labels: [
+            {
+                label: 'Work',
+                labelId: 2
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 37,
@@ -1254,8 +1411,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('8/4/2018'),
         inTrash: true,
-        label: 'Work',
+        labels: [
+            {
+                label: 'Work',
+                labelId: 2
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 38,
@@ -1293,8 +1456,9 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('6/3/2014'),
         inTrash: false,
-        label: null,
+        labels: [],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 39,
@@ -1346,8 +1510,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('1/29/2016'),
         inTrash: true,
-        label: 'Friends',
+        labels: [
+            {
+                label: 'Friends',
+                labelId: 1
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 40,
@@ -1392,8 +1562,9 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('8/26/2014'),
         inTrash: false,
-        label: null,
+        labels: [],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 41,
@@ -1424,8 +1595,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('9/11/2017'),
         inTrash: false,
-        label: 'Work',
+        labels: [
+            {
+                label: 'Work',
+                labelId: 2
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 42,
@@ -1463,8 +1640,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('1/8/2018'),
         inTrash: true,
-        label: 'Friends',
+        labels: [
+            {
+                label: 'Friends',
+                labelId: 1
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 43,
@@ -1488,8 +1671,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('2/4/2019'),
         inTrash: false,
-        label: 'Friends',
+        labels: [
+            {
+                label: 'Friends',
+                labelId: 1
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 44,
@@ -1541,8 +1730,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('8/30/2018'),
         inTrash: true,
-        label: 'Friends',
+        labels: [
+            {
+                label: 'Friends',
+                labelId: 1
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 45,
@@ -1558,8 +1753,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('1/10/2019'),
         inTrash: true,
-        label: 'Friends',
+        labels: [
+            {
+                label: 'Friends',
+                labelId: 1
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 46,
@@ -1597,8 +1798,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('8/1/2018'),
         inTrash: false,
-        label: 'Family',
+        labels: [
+            {
+                label: 'Family',
+                labelId: 3
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 47,
@@ -1636,8 +1843,9 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('2/12/2016'),
         inTrash: true,
-        label: null,
+        labels: [],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 48,
@@ -1661,8 +1869,9 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('4/4/2016'),
         inTrash: false,
-        label: null,
+        labels: [],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 49,
@@ -1700,8 +1909,9 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('3/25/2015'),
         inTrash: true,
-        label: null,
+        labels: [],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 50,
@@ -1725,8 +1935,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('1/10/2015'),
         inTrash: true,
-        label: 'Work',
+        labels: [
+            {
+                label: 'Work',
+                labelId: 2
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 51,
@@ -1778,8 +1994,9 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('10/15/2019'),
         inTrash: false,
-        label: null,
+        labels: [],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 52,
@@ -1831,8 +2048,9 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('1/23/2021'),
         inTrash: false,
-        label: null,
+        labels: [],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 53,
@@ -1870,8 +2088,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('10/24/2014'),
         inTrash: false,
-        label: 'Family',
+        labels: [
+            {
+                label: 'Family',
+                labelId: 3
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 54,
@@ -1923,8 +2147,9 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('1/4/2017'),
         inTrash: true,
-        label: null,
+        labels: [],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 55,
@@ -1948,8 +2173,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('10/14/2014'),
         inTrash: false,
-        label: 'Family',
+        labels: [
+            {
+                label: 'Family',
+                labelId: 3
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 56,
@@ -1973,8 +2204,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('3/3/2020'),
         inTrash: false,
-        label: 'Friends',
+        labels: [
+            {
+                label: 'Friends',
+                labelId: 1
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 57,
@@ -2026,8 +2263,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('5/13/2020'),
         inTrash: true,
-        label: 'Work',
+        labels: [
+            {
+                label: 'Work',
+                labelId: 2
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 58,
@@ -2058,8 +2301,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('2/28/2016'),
         inTrash: true,
-        label: 'Friends',
+        labels: [
+            {
+                label: 'Friends',
+                labelId: 1
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 59,
@@ -2097,8 +2346,9 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('7/27/2017'),
         inTrash: true,
-        label: null,
+        labels: [],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 60,
@@ -2114,8 +2364,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('2/2/2021'),
         inTrash: true,
-        label: 'Work',
+        labels: [
+            {
+                label: 'Work',
+                labelId: 2
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 61,
@@ -2153,8 +2409,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('5/24/2021'),
         inTrash: true,
-        label: 'Friends',
+        labels: [
+            {
+                label: 'Friends',
+                labelId: 1
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 62,
@@ -2206,8 +2468,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('11/16/2016'),
         inTrash: false,
-        label: 'Work',
+        labels: [
+            {
+                label: 'Work',
+                labelId: 2
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 63,
@@ -2259,8 +2527,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('8/4/2020'),
         inTrash: true,
-        label: 'Friends',
+        labels: [
+            {
+                label: 'Friends',
+                labelId: 1
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 64,
@@ -2312,8 +2586,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('3/21/2016'),
         inTrash: true,
-        label: 'Work',
+        labels: [
+            {
+                label: 'Work',
+                labelId: 2
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 65,
@@ -2365,8 +2645,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('9/18/2019'),
         inTrash: true,
-        label: 'Work',
+        labels: [
+            {
+                label: 'Work',
+                labelId: 2
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 66,
@@ -2382,8 +2668,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('2/12/2020'),
         inTrash: false,
-        label: 'Work',
+        labels: [
+            {
+                label: 'Work',
+                labelId: 2
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 67,
@@ -2428,8 +2720,9 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('10/15/2016'),
         inTrash: false,
-        label: null,
+        labels: [],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 68,
@@ -2474,8 +2767,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('2/19/2021'),
         inTrash: false,
-        label: 'Family',
+        labels: [
+            {
+                label: 'Family',
+                labelId: 3
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 69,
@@ -2491,8 +2790,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('11/6/2019'),
         inTrash: false,
-        label: 'Work',
+        labels: [
+            {
+                label: 'Work',
+                labelId: 2
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 70,
@@ -2537,8 +2842,9 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('5/17/2015'),
         inTrash: false,
-        label: null,
+        labels: [],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 71,
@@ -2590,8 +2896,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('12/23/2014'),
         inTrash: false,
-        label: 'Friends',
+        labels: [
+            {
+                label: 'Friends',
+                labelId: 1
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 72,
@@ -2629,8 +2941,9 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('3/24/2016'),
         inTrash: false,
-        label: null,
+        labels: [],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 73,
@@ -2661,8 +2974,9 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('11/24/2020'),
         inTrash: true,
-        label: null,
+        labels: [],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 74,
@@ -2678,8 +2992,9 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('4/20/2020'),
         inTrash: false,
-        label: null,
+        labels: [],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 75,
@@ -2717,8 +3032,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('9/30/2020'),
         inTrash: true,
-        label: 'Friends',
+        labels: [
+            {
+                label: 'Friends',
+                labelId: 1
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 76,
@@ -2742,8 +3063,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('7/21/2017'),
         inTrash: true,
-        label: 'Family',
+        labels: [
+            {
+                label: 'Family',
+                labelId: 3
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 77,
@@ -2788,8 +3115,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('1/21/2020'),
         inTrash: false,
-        label: 'Work',
+        labels: [
+            {
+                label: 'Work',
+                labelId: 2
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 78,
@@ -2841,8 +3174,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('6/18/2020'),
         inTrash: false,
-        label: 'Family',
+        labels: [
+            {
+                label: 'Family',
+                labelId: 3
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 79,
@@ -2858,8 +3197,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('12/16/2016'),
         inTrash: true,
-        label: 'Friends',
+        labels: [
+            {
+                label: 'Friends',
+                labelId: 1
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 80,
@@ -2904,8 +3249,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('5/24/2020'),
         inTrash: true,
-        label: 'Friends',
+        labels: [
+            {
+                label: 'Friends',
+                labelId: 1
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 81,
@@ -2943,8 +3294,9 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('3/9/2020'),
         inTrash: false,
-        label: null,
+        labels: [],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 82,
@@ -2975,8 +3327,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('9/9/2016'),
         inTrash: false,
-        label: 'Work',
+        labels: [
+            {
+                label: 'Work',
+                labelId: 2
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 83,
@@ -3021,8 +3379,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('10/29/2015'),
         inTrash: true,
-        label: 'Work',
+        labels: [
+            {
+                label: 'Work',
+                labelId: 2
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 84,
@@ -3046,8 +3410,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('2/26/2016'),
         inTrash: false,
-        label: 'Friends',
+        labels: [
+            {
+                label: 'Friends',
+                labelId: 1
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 85,
@@ -3099,8 +3469,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('10/1/2020'),
         inTrash: false,
-        label: 'Friends',
+        labels: [
+            {
+                label: 'Friends',
+                labelId: 1
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 86,
@@ -3131,8 +3507,9 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('10/20/2014'),
         inTrash: true,
-        label: null,
+        labels: [],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 87,
@@ -3177,8 +3554,9 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('9/19/2018'),
         inTrash: false,
-        label: null,
+        labels: [],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 88,
@@ -3216,8 +3594,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('8/9/2014'),
         inTrash: false,
-        label: 'Work',
+        labels: [
+            {
+                label: 'Work',
+                labelId: 2
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 89,
@@ -3248,8 +3632,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('7/1/2020'),
         inTrash: false,
-        label: 'Work',
+        labels: [
+            {
+                label: 'Work',
+                labelId: 2
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 90,
@@ -3294,8 +3684,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('6/30/2016'),
         inTrash: true,
-        label: 'Friends',
+        labels: [
+            {
+                label: 'Friends',
+                labelId: 1
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 91,
@@ -3319,8 +3715,9 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('11/29/2014'),
         inTrash: true,
-        label: null,
+        labels: [],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 92,
@@ -3351,8 +3748,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('1/3/2021'),
         inTrash: false,
-        label: 'Friends',
+        labels: [
+            {
+                label: 'Friends',
+                labelId: 1
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 93,
@@ -3404,8 +3807,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('8/30/2020'),
         inTrash: true,
-        label: 'Work',
+        labels: [
+            {
+                label: 'Work',
+                labelId: 2
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 94,
@@ -3436,8 +3845,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('5/16/2016'),
         inTrash: true,
-        label: 'Friends',
+        labels: [
+            {
+                label: 'Friends',
+                labelId: 1
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 95,
@@ -3468,8 +3883,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('11/17/2016'),
         inTrash: false,
-        label: 'Family',
+        labels: [
+            {
+                label: 'Family',
+                labelId: 3
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 96,
@@ -3493,8 +3914,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('8/7/2015'),
         inTrash: false,
-        label: 'Friends',
+        labels: [
+            {
+                label: 'Friends',
+                labelId: 1
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 97,
@@ -3510,8 +3937,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('1/21/2018'),
         inTrash: false,
-        label: 'Work',
+        labels: [
+            {
+                label: 'Work',
+                labelId: 2
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 98,
@@ -3542,8 +3975,9 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('3/3/2018'),
         inTrash: true,
-        label: null,
+        labels: [],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 99,
@@ -3574,8 +4008,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('3/15/2018'),
         inTrash: false,
-        label: 'Friends',
+        labels: [
+            {
+                label: 'Friends',
+                labelId: 1
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 100,
@@ -3620,8 +4060,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('9/1/2019'),
         inTrash: true,
-        label: 'Friends',
+        labels: [
+            {
+                label: 'Friends',
+                labelId: 1
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 101,
@@ -3637,8 +4083,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('3/28/2020'),
         inTrash: true,
-        label: 'Friends',
+        labels: [
+            {
+                label: 'Friends',
+                labelId: 1
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 102,
@@ -3683,8 +4135,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('12/5/2014'),
         inTrash: true,
-        label: 'Friends',
+        labels: [
+            {
+                label: 'Friends',
+                labelId: 1
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 103,
@@ -3715,8 +4173,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('3/26/2017'),
         inTrash: false,
-        label: 'Friends',
+        labels: [
+            {
+                label: 'Friends',
+                labelId: 1
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 104,
@@ -3754,8 +4218,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('6/16/2017'),
         inTrash: false,
-        label: 'Family',
+        labels: [
+            {
+                label: 'Family',
+                labelId: 3
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 105,
@@ -3793,8 +4263,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('3/17/2016'),
         inTrash: true,
-        label: 'Family',
+        labels: [
+            {
+                label: 'Family',
+                labelId: 3
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 106,
@@ -3832,8 +4308,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('12/23/2016'),
         inTrash: true,
-        label: 'Work',
+        labels: [
+            {
+                label: 'Work',
+                labelId: 2
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 107,
@@ -3864,8 +4346,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('12/30/2016'),
         inTrash: true,
-        label: 'Friends',
+        labels: [
+            {
+                label: 'Friends',
+                labelId: 1
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 108,
@@ -3896,8 +4384,9 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('1/30/2020'),
         inTrash: true,
-        label: null,
+        labels: [],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 109,
@@ -3935,8 +4424,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('8/12/2016'),
         inTrash: true,
-        label: 'Family',
+        labels: [
+            {
+                label: 'Family',
+                labelId: 3
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 110,
@@ -3952,8 +4447,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('5/27/2016'),
         inTrash: false,
-        label: 'Work',
+        labels: [
+            {
+                label: 'Work',
+                labelId: 2
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 111,
@@ -3998,8 +4499,9 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('9/21/2015'),
         inTrash: false,
-        label: null,
+        labels: [],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 112,
@@ -4044,8 +4546,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('12/29/2017'),
         inTrash: false,
-        label: 'Friends',
+        labels: [
+            {
+                label: 'Friends',
+                labelId: 1
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 113,
@@ -4090,8 +4598,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('4/7/2017'),
         inTrash: false,
-        label: 'Work',
+        labels: [
+            {
+                label: 'Work',
+                labelId: 2
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 114,
@@ -4115,8 +4629,9 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('6/4/2018'),
         inTrash: true,
-        label: null,
+        labels: [],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 115,
@@ -4140,8 +4655,9 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('6/2/2019'),
         inTrash: true,
-        label: null,
+        labels: [],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 116,
@@ -4186,8 +4702,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('2/23/2019'),
         inTrash: true,
-        label: 'Work',
+        labels: [
+            {
+                label: 'Work',
+                labelId: 2
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 117,
@@ -4225,8 +4747,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('5/30/2018'),
         inTrash: false,
-        label: 'Friends',
+        labels: [
+            {
+                label: 'Friends',
+                labelId: 1
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 118,
@@ -4271,8 +4799,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('11/9/2019'),
         inTrash: false,
-        label: 'Family',
+        labels: [
+            {
+                label: 'Family',
+                labelId: 3
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 119,
@@ -4303,8 +4837,9 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('11/3/2014'),
         inTrash: false,
-        label: null,
+        labels: [],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 120,
@@ -4335,8 +4870,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('12/17/2015'),
         inTrash: true,
-        label: 'Family',
+        labels: [
+            {
+                label: 'Family',
+                labelId: 3
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 121,
@@ -4388,8 +4929,9 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('5/17/2020'),
         inTrash: false,
-        label: null,
+        labels: [],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 122,
@@ -4441,8 +4983,9 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('8/3/2016'),
         inTrash: true,
-        label: null,
+        labels: [],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 123,
@@ -4473,8 +5016,9 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('11/27/2019'),
         inTrash: true,
-        label: null,
+        labels: [],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 124,
@@ -4498,8 +5042,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('10/15/2019'),
         inTrash: false,
-        label: 'Friends',
+        labels: [
+            {
+                label: 'Friends',
+                labelId: 1
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 125,
@@ -4537,8 +5087,9 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('1/8/2019'),
         inTrash: false,
-        label: null,
+        labels: [],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 126,
@@ -4554,8 +5105,9 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('10/1/2018'),
         inTrash: true,
-        label: null,
+        labels: [],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
     {
         id: 127,
@@ -4600,8 +5152,14 @@ export const Contacts: Contact[] = [
         favorite: false,
         lastContacted: new Date('8/6/2014'),
         inTrash: true,
-        label: 'Friends',
+        labels: [
+            {
+                label: 'Friends',
+                labelId: 1
+            }
+        ],
         color: randomRgba(),
+        photoUrl: getRandomNumber() > 6 ? faker.image.avatar() : null,
     },
 ];
 
@@ -4611,4 +5169,8 @@ export function randomRgba(): string {
         min = 50,
         max = 220;
     return 'rgb(' + o(r() * (max - min + 1) + min) + ',' + o(r() * (max - min + 1) + min) + ',' + o(r() * (max - min + 1) + min) + ')';
+}
+
+export function getRandomNumber(): number {
+    return Math.floor(Math.random() * 10) + 1;
 }

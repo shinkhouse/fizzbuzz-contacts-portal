@@ -103,7 +103,7 @@ export class ContactDetailsComponent implements OnInit {
             favorite: [this.contact.favorite],
             lastContacted: [''],
             inTrash: ['false'],
-            label: [this.contact.label]
+            label: this.fb.array(this.contact.labels)
         });
     }
 

@@ -5,9 +5,9 @@
         </div>
         <div fxLayout="column" fxLayoutGap="8px">
             <span>{{contact.firstName}} {{contact.lastName}}</span>
-            <mat-chip-listbox *ngIf="contact.label">
-                <mat-chip-option>
-                    {{contact.label}}
+            <mat-chip-listbox *ngIf="contact.labels">
+                <mat-chip-option *ngFor="let label of contact.labels">
+                    {{label.label}}
                 </mat-chip-option>
             </mat-chip-listbox>
         </div>

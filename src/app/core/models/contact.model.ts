@@ -1,5 +1,6 @@
 export interface Contact {
     id: number;
+    photoUrl: string | null;
     prefix?: string
     firstName: string;
     lastName?: string;
@@ -20,32 +21,9 @@ export interface Contact {
     favorite: boolean;
     lastContacted: Date;
     inTrash?: boolean;
-    label?: string | null;
-    labelId?: string;
+    labels: Label[];
     color: string;
 }
-
-
-// export interface Contact {
-//     id?: number;
-//     prefix?: string
-//     firstName: string;
-//     lastName?: string;
-//     suffix?: string;
-//     companyName?: string;
-//     jobTitle?: string;
-//     emails?: Email[];
-//     phones?: Phone[];
-//     addresses?: Address[];
-//     birthday?: Date;
-//     events?: Event[];
-//     notes?: string;
-//     website?: string;
-//     relationship?: string;
-//     chat?: string;
-//     internetCall?: string;
-//     nickname?: string;
-// }
 
 export interface Email {
     email: string;
@@ -72,4 +50,9 @@ export interface Address {
 export interface Event {
     eventDate: string;
     eventCategory: string;
+}
+
+export interface Label {
+    label: string;
+    labelId: number;
 }

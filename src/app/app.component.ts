@@ -23,6 +23,7 @@ import { MatListModule } from '@angular/material/list';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { HeaderComponent } from './core/components/header/header.component';
+import { SendFeedbackComponent } from './core/components/send-feedback/send-feedback.component';
 
 @Component({
     selector: 'app-root',
@@ -40,6 +41,7 @@ import { HeaderComponent } from './core/components/header/header.component';
         NgFor,
         RouterOutlet,
         HeaderComponent,
+        SendFeedbackComponent
     ],
 })
 export class AppComponent implements OnInit, AfterViewInit {
@@ -47,6 +49,7 @@ export class AppComponent implements OnInit, AfterViewInit {
     public contactTags = this.contacts.getContactTags();
     public drawerMode: MatDrawerMode;
     public isDrawerOpen: boolean;
+    public isSendFeedbackOpen: boolean = false;
     @ViewChild('drawer') drawer: MatDrawer;
 
     constructor(
@@ -95,5 +98,10 @@ export class AppComponent implements OnInit, AfterViewInit {
             minWidth: '700px',
             panelClass: 'contact-modal',
         });
+    }
+
+    toggleSendFeedbackDrawer() {
+        console.log('hello');
+        this.isSendFeedbackOpen = !this.isSendFeedbackOpen;
     }
 }

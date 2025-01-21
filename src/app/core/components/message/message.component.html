@@ -1,0 +1,8 @@
+<div class="message" [ngClass]="severity">
+    <mat-icon *ngIf="icon">{{icon}}</mat-icon>
+    <div class="message-content">
+        <p class="subject">{{subject}}</p>
+        <p class="description">{{description}}</p>
+    </div>
+    <button mat-button *ngIf="buttonText" (click)="emitButtonClick()">{{buttonText}}</button>
+</div>
