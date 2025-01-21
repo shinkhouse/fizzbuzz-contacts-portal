@@ -7,11 +7,10 @@ import { MatInputModule } from '@angular/material/input';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
 @Component({
-  selector: 'app-send-feedback',
-  standalone: true,
-  imports: [CommonModule, NgClass, MatIconModule, MatButtonModule, MatFormFieldModule, MatInputModule, MatToolbarModule],
-  templateUrl: './send-feedback.component.html',
-  styleUrl: './send-feedback.component.scss'
+    selector: 'app-send-feedback',
+    imports: [CommonModule, NgClass, MatIconModule, MatButtonModule, MatFormFieldModule, MatInputModule, MatToolbarModule],
+    templateUrl: './send-feedback.component.html',
+    styleUrl: './send-feedback.component.scss'
 })
 export class SendFeedbackComponent implements AfterViewInit {
   @Output() closed: EventEmitter<boolean> = new EventEmitter();

@@ -5,7 +5,6 @@ import { EmptyListingComponent } from '../../core/components/empty-listing/empty
     selector: 'app-suggestions',
     templateUrl: './suggestions.component.html',
     styleUrls: ['./suggestions.component.scss'],
-    standalone: true,
     imports: [EmptyListingComponent]
 })
 export class SuggestionsComponent implements OnInit {

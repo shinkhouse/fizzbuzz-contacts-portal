@@ -8,7 +8,6 @@ import { ContactsService } from 'src/app/core/services/contacts.service';
     selector: 'app-trash',
     templateUrl: './trash.component.html',
     styleUrls: ['./trash.component.scss'],
-    standalone: true,
     imports: [ListingComponent, MessageComponent]
 })
 export class TrashComponent implements OnInit {

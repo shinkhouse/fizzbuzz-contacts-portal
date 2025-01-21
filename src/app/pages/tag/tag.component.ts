@@ -8,7 +8,6 @@ import { ContactsService } from 'src/app/core/services/contacts.service';
     selector: 'app-tag',
     templateUrl: './tag.component.html',
     styleUrls: ['./tag.component.scss'],
-    standalone: true,
     imports: [ListingComponent]
 })
 export class TagComponent implements OnInit {

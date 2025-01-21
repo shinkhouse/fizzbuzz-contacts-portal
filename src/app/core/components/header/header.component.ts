@@ -22,7 +22,6 @@ import { OverlayModule } from '@angular/cdk/overlay';
     selector: 'app-header',
     templateUrl: './header.component.html',
     styleUrls: ['./header.component.scss'],
-    standalone: true,
     imports: [
         MatToolbarModule,
         FlexModule,
@@ -38,7 +37,7 @@ import { OverlayModule } from '@angular/cdk/overlay';
         MatMenuModule,
         AsyncPipe,
         OverlayModule
-    ],
+    ]
 })
 export class HeaderComponent implements OnInit {
     @Output() sendFeedbackToggled: EventEmitter<boolean> = new EventEmitter();

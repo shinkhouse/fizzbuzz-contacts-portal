@@ -8,11 +8,10 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 
 @Component({
-  selector: 'app-modify-columns',
-  standalone: true,
-  imports: [CommonModule, MatDialogModule, MatButtonModule, MatSelectModule, MatIconModule, MatInputModule, MatFormFieldModule],
-  templateUrl: './modify-columns.component.html',
-  styleUrl: './modify-columns.component.scss'
+    selector: 'app-modify-columns',
+    imports: [CommonModule, MatDialogModule, MatButtonModule, MatSelectModule, MatIconModule, MatInputModule, MatFormFieldModule],
+    templateUrl: './modify-columns.component.html',
+    styleUrl: './modify-columns.component.scss'
 })
 export class ModifyColumnsComponent {
   columns = [];

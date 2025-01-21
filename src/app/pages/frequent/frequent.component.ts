@@ -7,8 +7,7 @@ import { ListingComponent } from '../../core/components/listing/listing.componen
     selector: 'app-frequent',
     templateUrl: './frequent.component.html',
     styleUrls: ['./frequent.component.scss'],
-    standalone: true,
-    imports: [ListingComponent],
+    imports: [ListingComponent]
 })
 export class FrequentComponent implements OnInit {
     public contactList: Contact[];

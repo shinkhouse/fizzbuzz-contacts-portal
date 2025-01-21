@@ -10,8 +10,7 @@ import { ListingComponent } from '../../core/components/listing/listing.componen
     selector: 'app-contacts',
     templateUrl: './contacts.component.html',
     styleUrls: ['./contacts.component.scss'],
-    standalone: true,
-    imports: [ListingComponent],
+    imports: [ListingComponent]
 })
 export class ContactsComponent implements OnInit {
     public contactList: Contact[];

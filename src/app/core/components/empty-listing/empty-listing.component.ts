@@ -5,7 +5,6 @@ import { MatIconModule } from '@angular/material/icon';
     selector: 'app-empty-listing',
     templateUrl: './empty-listing.component.html',
     styleUrls: ['./empty-listing.component.scss'],
-    standalone: true,
     imports: [MatIconModule]
 })
 export class EmptyListingComponent implements OnInit {

@@ -17,8 +17,7 @@ import { ModifyColumnsComponent } from '../modify-columns/modify-columns.compone
     selector: 'app-listing',
     templateUrl: './listing.component.html',
     styleUrls: ['./listing.component.scss'],
-    standalone: true,
-    imports: [MatMenuModule, MatDialogModule, MatSnackBarModule, MatIconModule, MatButtonModule, FlexLayoutModule, NgForOf, NgIf, MatChipsModule, JsonPipe, NgTemplateOutlet],
+    imports: [MatMenuModule, MatDialogModule, MatSnackBarModule, MatIconModule, MatButtonModule, FlexLayoutModule, NgForOf, NgIf, MatChipsModule, JsonPipe, NgTemplateOutlet]
 })
 export class ListingComponent implements OnInit {
     @Input() contactList: Contact[];

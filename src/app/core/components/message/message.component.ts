@@ -4,11 +4,10 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 
 @Component({
-  selector: 'app-message',
-  standalone: true,
-  imports: [CommonModule, MatIconModule, MatButtonModule],
-  templateUrl: './message.component.html',
-  styleUrl: './message.component.scss'
+    selector: 'app-message',
+    imports: [CommonModule, MatIconModule, MatButtonModule],
+    templateUrl: './message.component.html',
+    styleUrl: './message.component.scss'
 })
 export class MessageComponent {
   @Input() severity: 'info' | 'warning' | 'error' = 'info';

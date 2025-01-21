@@ -29,7 +29,6 @@ import { SendFeedbackComponent } from './core/components/send-feedback/send-feed
     selector: 'app-root',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss'],
-    standalone: true,
     imports: [
         MatSidenavModule,
         MatButtonModule,
@@ -42,7 +41,7 @@ import { SendFeedbackComponent } from './core/components/send-feedback/send-feed
         RouterOutlet,
         HeaderComponent,
         SendFeedbackComponent
-    ],
+    ]
 })
 export class AppComponent implements OnInit, AfterViewInit {
     public contactsLength = this.contacts.getContacts().length;

@@ -8,10 +8,9 @@ import { NgIf } from '@angular/common';
 
 @Component({
     selector: 'app-density-selector-dialog',
-    standalone: true,
     imports: [MatDialogModule, MatButtonToggleModule, ReactiveFormsModule, MatButtonModule, FlexLayoutModule, NgIf],
     templateUrl: './density-selector-dialog.component.html',
-    styleUrl: './density-selector-dialog.component.scss',
+    styleUrl: './density-selector-dialog.component.scss'
 })
 export class DensitySelectorDialogComponent {
     public density = new FormControl('comfortable');

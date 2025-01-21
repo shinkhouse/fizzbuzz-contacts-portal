@@ -16,7 +16,6 @@ import { NgIf, NgFor, DatePipe } from '@angular/common';
     selector: 'app-contact-details',
     templateUrl: './contact-details.component.html',
     styleUrls: ['./contact-details.component.scss'],
-    standalone: true,
     imports: [
         NgIf,
         MatToolbarModule,
@@ -30,7 +29,7 @@ import { NgIf, NgFor, DatePipe } from '@angular/common';
         MatFormFieldModule,
         MatInputModule,
         DatePipe,
-    ],
+    ]
 })
 export class ContactDetailsComponent implements OnInit {
     public editMode: boolean;
