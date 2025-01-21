@@ -37,6 +37,10 @@
     </div>
 </div>
 <div class="contacts-container" fxLayout="column">
+    <div class="empty-state" *ngIf="contactList.length === 0">
+        <img class="empty-state-image" alt="Empty State Person" src="../../../../assets/icons/undraw_landscape-photographer_e84n.svg">
+        <p class="empty-state-message">You have not added any contacts yet.</p>
+    </div>
     <ng-container *ngFor="let contact of contactList; let index = index">
         <span class="row-subheader" *ngIf="contact.favorite && index === 0">Favorites</span>
         <ng-container *ngIf="contact.favorite">

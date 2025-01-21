@@ -2,12 +2,11 @@ import { Component, Input, OnInit } from '@angular/core';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { Contact } from '../../models/contact.model';
-import { ContactsService } from '../../services/contacts.service';
 import { ContactDetailsComponent } from '../contact-details/contact-details.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { JsonPipe, NgForOf, NgIf, NgTemplateOutlet } from '@angular/common';
+import {  NgForOf, NgIf, NgTemplateOutlet } from '@angular/common';
 import { MatMenuModule } from '@angular/material/menu';
 import { DensitySelectorDialogComponent } from '../density-selector-dialog/density-selector-dialog.component';
 import { MatChipsModule } from '@angular/material/chips';
@@ -17,7 +16,7 @@ import { ModifyColumnsComponent } from '../modify-columns/modify-columns.compone
     selector: 'app-listing',
     templateUrl: './listing.component.html',
     styleUrls: ['./listing.component.scss'],
-    imports: [MatMenuModule, MatDialogModule, MatSnackBarModule, MatIconModule, MatButtonModule, FlexLayoutModule, NgForOf, NgIf, MatChipsModule, JsonPipe, NgTemplateOutlet]
+    imports: [MatMenuModule, MatDialogModule, MatSnackBarModule, MatIconModule, MatButtonModule, FlexLayoutModule, NgForOf, NgIf, MatChipsModule, NgTemplateOutlet]
 })
 export class ListingComponent implements OnInit {
     @Input() contactList: Contact[];
@@ -42,7 +41,7 @@ export class ListingComponent implements OnInit {
         this.contactList[index].favorite = !favorited;
         this.snackbar.open(`
             You ${!favorited ? 'favorited' : 'unfavorited'} contact ${this.contactList[index].firstName} ${this.contactList[index].lastName}
-        `);
+        `, 'Close', {duration: 5000});
     }
 
     openDensityDialog() {

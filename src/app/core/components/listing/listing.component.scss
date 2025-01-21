@@ -1,3 +1,19 @@
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 24px;
+
+    .empty-state-message {
+        font-size: 16px;
+        color: var(--text-color-secondary);
+    }
+}
+.empty-state-image {
+    width: 300px;
+}
 .contact {
     padding: 16px 0px;
     height: 64px;
