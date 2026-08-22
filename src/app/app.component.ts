@@ -110,4 +110,8 @@ export class AppComponent implements OnInit, AfterViewInit {
             minWidth: '360px'
         });
     }
+
+    importContacts() {
+        
+    }
 }

@@ -93,6 +93,10 @@ export const Contacts: Contact[] = [
             {
                 label: 'Friends',
                 labelId: 1
+            },
+            {
+                label: 'Family',
+                labelId: 3
             }
         ],
         color: randomRgba(),
